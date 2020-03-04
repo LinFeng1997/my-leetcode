@@ -5,7 +5,7 @@ var findAllTwoSum = function (nums, target) {
     nums.forEach((e, i) => {
         let left = map[target - e];
         if (left !== undefined) {
-            rst.push([-target, target - e, e]);
+            rst.push([-target, target - e || 0, e]);
         }
         map[e] = i;
     });
@@ -34,9 +34,9 @@ var threeSum = function(nums) {
     nums.sort(((a, b) => a - b));
     while (nums.length){
         let num = nums.shift();
-        // if (nums.length > 2 && nums[0] === nums[1] && nums[1] === nums[2] && nums[0] !== 0) {
-        //     continue;
-        // }
+        if (nums.length > 2 && nums[0] === nums[1] && nums[1] === nums[2] && nums[0] !== 0) {
+            nums.shift();
+        }
 
         const item = findAllTwoSum(nums,-num);
         if(item.length){
