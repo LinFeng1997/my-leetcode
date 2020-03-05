@@ -1,4 +1,5 @@
 /**
+ * 使用哈希表记录目标值的配对值，以空间换时间
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}

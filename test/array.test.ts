@@ -1,6 +1,6 @@
 const twoSum = require('../src/array/1.two-sum');
-const threeSum = require('../src/array/15.three-sum');
-// const threeSum = require('../src/array/15.three-sum-perfect');
+// const threeSum = require('../src/array/15.three-sum');
+const threeSum = require('../src/array/15.three-sum-perfect');
 const now = require("performance-now");
 describe('array', () => {
   test('1. two sum', () => {
