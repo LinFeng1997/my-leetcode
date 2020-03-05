@@ -1,32 +1,44 @@
 const twoSum = require('../src/array/1.two-sum');
 // const threeSum = require('../src/array/15.three-sum');
 const threeSum = require('../src/array/15.three-sum-perfect');
-const now = require("performance-now");
+const now = require('performance-now');
 describe('array', () => {
   test('1. two sum', () => {
     expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);
   });
 
   test('15. three sum', () => {
-    expect(threeSum([-1, 0, 1, 2, -1, -4])).toEqual(expect.arrayContaining([
-      [-1, 0, 1],
-      [-1, -1, 2],
-    ]));
+    expect(threeSum([-1, 0, 1, 2, -1, -4])).toEqual(
+      expect.arrayContaining([
+        [-1, 0, 1],
+        [-1, -1, 2],
+      ])
+    );
 
     expect(threeSum([1, 2, 3, 4, 5, 6])).toEqual([]);
     expect(threeSum([0, 0, 0])).toEqual([[0, 0, 0]]);
     expect(threeSum([1, 1, -2])).toEqual([[-2, 1, 1]]);
 
-    expect(threeSum([-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6])).toEqual(expect.arrayContaining(
-      [
+    const repeatCase1 = threeSum([-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6]);
+    expect(repeatCase1).toEqual(
+      expect.arrayContaining([
         [-4, 2, 2],
         [-4, 1, 3],
         [-4, 0, 4],
         [-4, -2, 6],
         [-2, 0, 2],
         [-2, -2, 4],
-      ]
-    ));
+      ])
+    );
+    expect(repeatCase1.length).toBe(6);
+
+    const repeatCase2 = threeSum([-2, 0, 3, -1, 4, 0, 3, 4, 1, 1, 1, -3, -5, 4, 0]);
+    expect(threeSum([-2, 0, 3, -1, 4, 0, 3, 4, 1, 1, 1, -3, -5, 4, 0])).toEqual(
+        expect.arrayContaining([
+          [-5, 1, 4], [-3, -1, 4], [-3, 0, 3], [-2, -1, 3], [-2, 1, 1], [-1, 0, 1], [0, 0, 0]
+        ])
+    );
+    expect(repeatCase2.length).toBe(7);
     var start = now();
     const exceedTimeCase = threeSum([
       82597,

@@ -4,45 +4,45 @@
  * @return {number[][]}
  */
 var threeSum = function (nums) {
-    var rtn = [];
-    // optimize
+    let rst = [];
     if (nums.length < 3) {
-        return rtn;
+        return [];
     }
-    nums = nums.sort(function (a, b) {
-        return a - b;
-    });
-    for (var i = 0; i < nums.length - 2; i++) {
+
+    // sort to search
+    nums.sort((a, b) => a - b);
+
+    for (let now = 0; now < nums.length - 2; now++) {
         // optimize
-        if (nums[i] > 0) {
-            return rtn;
+        if (nums[now] > 0) {
+            return rst;
         }
-        // drop repeat
-        if (i > 0 && nums[i] === nums[i - 1]) {
+
+        // repeat target
+        if (now > 0 && nums[now] === nums[now - 1]) {
             continue;
         }
-        //第三个数从后面往前找
-        for (var j = i + 1, k = nums.length - 1; j < k;) {
-            if (nums[i] + nums[j] + nums[k] === 0) {
-                rtn.push([nums[i], nums[j], nums[k]]);
-                j++;
-                k--;
-                // repeat
-                while (j < k && nums[j] === nums[j - 1]) {
-                    j++;
-                }
-                // repeat
-                while (j < k && nums[k] === nums[k + 1]) {
-                    k--;
-                }
-            } else if (nums[i] + nums[j] + nums[k] > 0) {
-                k--;
+
+        for (let left = now + 1, right = nums.length - 1; left < right;) {
+            if (nums[now] + nums[left] + nums[right] === 0) {
+                rst.push([nums[now], nums[left], nums[right]]);
+                left++;
+                right--;
+
+                // repect left
+                while (nums[left] === nums[left - 1]) left++;
+
+                // repect right
+                while (nums[right] === nums[right + 1]) right--;
+            } else if (nums[now] + nums[left] + nums[right] > 0) {
+                right--;
             } else {
-                j++;
+                left++;
             }
         }
     }
-    return rtn;
+
+    return rst;
 };
 
 module.exports = threeSum;
