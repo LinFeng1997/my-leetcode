@@ -19,7 +19,23 @@ describe('array', () => {
     expect(threeSum([0, 0, 0])).toEqual([[0, 0, 0]]);
     expect(threeSum([1, 1, -2])).toEqual([[-2, 1, 1]]);
 
-    const repeatCase1 = threeSum([-4, -2, -2, -2, 0, 1, 2, 2, 2, 3, 3, 4, 4, 6, 6]);
+    const repeatCase1 = threeSum([
+      -4,
+      -2,
+      -2,
+      -2,
+      0,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      4,
+      4,
+      6,
+      6,
+    ]);
     expect(repeatCase1).toEqual(
       expect.arrayContaining([
         [-4, 2, 2],
@@ -32,11 +48,33 @@ describe('array', () => {
     );
     expect(repeatCase1.length).toBe(6);
 
-    const repeatCase2 = threeSum([-2, 0, 3, -1, 4, 0, 3, 4, 1, 1, 1, -3, -5, 4, 0]);
+    const repeatCase2 = threeSum([
+      -2,
+      0,
+      3,
+      -1,
+      4,
+      0,
+      3,
+      4,
+      1,
+      1,
+      1,
+      -3,
+      -5,
+      4,
+      0,
+    ]);
     expect(threeSum([-2, 0, 3, -1, 4, 0, 3, 4, 1, 1, 1, -3, -5, 4, 0])).toEqual(
-        expect.arrayContaining([
-          [-5, 1, 4], [-3, -1, 4], [-3, 0, 3], [-2, -1, 3], [-2, 1, 1], [-1, 0, 1], [0, 0, 0]
-        ])
+      expect.arrayContaining([
+        [-5, 1, 4],
+        [-3, -1, 4],
+        [-3, 0, 3],
+        [-2, -1, 3],
+        [-2, 1, 1],
+        [-1, 0, 1],
+        [0, 0, 0],
+      ])
     );
     expect(repeatCase2.length).toBe(7);
     var start = now();
