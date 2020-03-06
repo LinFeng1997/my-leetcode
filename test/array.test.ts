@@ -3087,15 +3087,20 @@ describe('array', () => {
 
   test('18. four sum', () => {
     expect(fourSum([1, 0, -1, 0, -2, 2], 0)).toEqual(
-        expect.arrayContaining([
-          [-1, 0, 0, 1],
-          [-2, -1, 1, 2],
-          [-2, 0, 0, 2]
-        ])
+      expect.arrayContaining([
+        [-1, 0, 0, 1],
+        [-2, -1, 1, 2],
+        [-2, 0, 0, 2],
+      ])
     );
     expect(fourSum([0, 0, 0, 0], 0)).toEqual([[0, 0, 0, 0]]);
     expect(fourSum([-1, 0, -5, -2, -2, -4, 0, 1, -2], -9)).toEqual(
-        expect.arrayContaining([[-5, -4, -1, 1], [-5, -4, 0, 0], [-5, -2, -2, 0], [-4, -2, -2, -1]])
+      expect.arrayContaining([
+        [-5, -4, -1, 1],
+        [-5, -4, 0, 0],
+        [-5, -2, -2, 0],
+        [-4, -2, -2, -1],
+      ])
     );
   });
 });
