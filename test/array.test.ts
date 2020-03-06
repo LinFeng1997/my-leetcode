@@ -1,6 +1,6 @@
 const twoSum = require('../src/array/1.two-sum');
-// const threeSum = require('../src/array/15.three-sum');
 const threeSum = require('../src/array/15.three-sum-perfect');
+const fourSum = require('../src/array/18.four-sum');
 const now = require('performance-now');
 describe('array', () => {
   test('1. two sum', () => {
@@ -3083,5 +3083,19 @@ describe('array', () => {
     expect(exceedTimeCase.length).toEqual(16258);
     var end = now();
     expect(end - start).toBeLessThan(100);
+  });
+
+  test('18. four sum', () => {
+    expect(fourSum([1, 0, -1, 0, -2, 2], 0)).toEqual(
+        expect.arrayContaining([
+          [-1, 0, 0, 1],
+          [-2, -1, 1, 2],
+          [-2, 0, 0, 2]
+        ])
+    );
+    expect(fourSum([0, 0, 0, 0], 0)).toEqual([[0, 0, 0, 0]]);
+    expect(fourSum([-1, 0, -5, -2, -2, -4, 0, 1, -2], -9)).toEqual(
+        expect.arrayContaining([[-5, -4, -1, 1], [-5, -4, 0, 0], [-5, -2, -2, 0], [-4, -2, -2, -1]])
+    );
   });
 });
