@@ -3,7 +3,13 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function (nums) {
-    for (let lastNonZeroIndex = 0, current = 0; current < nums.length; current++) {
+    let lastNonZeroIndex = 0;
+    // optimize
+    // while (nums[lastNonZeroIndex] !== 0 && lastNonZeroIndex < nums.length){
+    //     lastNonZeroIndex++;
+    // }
+
+    for (let current = lastNonZeroIndex + 1; current < nums.length; current++) {
         if (nums[current] !== 0) {
             swap(nums, lastNonZeroIndex, current);
             lastNonZeroIndex++;
@@ -13,7 +19,7 @@ var moveZeroes = function (nums) {
 };
 
 function swap(array, source, target) {
-    if (source === target) {
+    if (array[source] === array[target]) {
         return;
     }
     let temp = array[source];
