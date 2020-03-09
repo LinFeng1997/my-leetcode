@@ -1,6 +1,7 @@
 const twoSum = require('../src/array/1.two-sum');
 const threeSum = require('../src/array/15.three-sum-perfect');
 const fourSum = require('../src/array/18.four-sum');
+const moveZeroes = require('../src/array/283.moveZeroes');
 const now = require('performance-now');
 describe('array', () => {
   test('1. two sum', () => {
@@ -3102,5 +3103,9 @@ describe('array', () => {
         [-4, -2, -2, -1],
       ])
     );
+  });
+
+  test('283. move zeroes', () => {
+    expect(moveZeroes([0,1,0,3,12])).toEqual([1,3,12,0,0]);
   });
 });
