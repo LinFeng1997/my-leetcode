@@ -4,6 +4,7 @@ const fourSum = require('../src/array/18.four-sum');
 const moveZeroes = require('../src/array/283.moveZeroes');
 const removeElement = require('../src/array/27.removeElement');
 const removeDuplicates = require('../src/array/26.removeDuplicates');
+const removeDuplicatesII = require('../src/array/80.removeDuplicates');
 const now = require('performance-now');
 describe('array', () => {
   test('1. two sum', () => {
@@ -3129,5 +3130,17 @@ describe('array', () => {
     const case2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
     expect(removeDuplicates(case2)).toEqual(5);
     expect(case2.slice(0, 5)).toEqual(expect.arrayContaining([0, 1, 2, 3, 4]));
+  });
+
+  test('80. remove duplicates II', () => {
+    const case1 = [1, 1, 1, 2, 2, 3];
+    expect(removeDuplicatesII(case1)).toEqual(5);
+    expect(case1.slice(0, 5)).toEqual([1, 1, 2, 2, 3]);
+
+    const case2 = [0, 0, 1, 1, 1, 1, 2, 3, 3];
+    expect(removeDuplicatesII(case2)).toEqual(7);
+    expect(case2.slice(0, 7)).toEqual(
+      expect.arrayContaining([0, 0, 1, 1, 2, 3, 3])
+    );
   });
 });
