@@ -15,4 +15,9 @@ describe('sort', () => {
     mergeSortArray(nums1_1, 0, [1], 1);
     expect(nums1_1).toEqual([1]);
   });
+
+  test('215. find kth largest', () => {
+    const findKthLargest = require('../src/sort/215.findKthLargest');
+    expect(findKthLargest([3, 2, 1, 5, 6, 4], 2)).toEqual(5);
+  });
 });
