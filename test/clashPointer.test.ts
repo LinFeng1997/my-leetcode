@@ -9,4 +9,10 @@ describe('clash pointer', () => {
     expect(isPalindrome('A man, a plan, a canal: Panama')).toEqual(true);
     expect(isPalindrome('race a car')).toEqual(false);
   });
+
+  test('344. reverse string', () => {
+    const reverseString = require('../src/clashPointer/344.reverseString');
+    expect(reverseString(["h","e","l","l","o"])).toEqual(["o","l","l","e","h"]);
+    expect(reverseString(["H","a","n","n","a","h"])).toEqual(["h","a","n","n","a","H"]);
+  });
 });
