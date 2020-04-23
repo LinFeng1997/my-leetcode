@@ -48,6 +48,6 @@ describe('clash pointer', () => {
 
   test('11. max area', () => {
     const maxArea = require('../src/clashPointer/11.maxArea');
-    expect(maxArea([1,8,6,2,5,4,8,3,7])).toEqual(49);
+    expect(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])).toEqual(49);
   });
 });
