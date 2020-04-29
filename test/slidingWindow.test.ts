@@ -10,4 +10,10 @@ describe('clash pointer', () => {
     expect(minSubArrayLen('bbbbb')).toEqual(1);
     expect(minSubArrayLen('pwwkew')).toEqual(3);
   });
+
+  test('438. find an agrams', () => {
+    const findAnagrams = require('../src/slidingWindow/438.findAnagrams');
+    expect(findAnagrams('cbaebabacd', 'abc')).toEqual([0, 6]);
+    expect(findAnagrams('abab', 'ab')).toEqual([0, 1, 2]);
+  });
 });
