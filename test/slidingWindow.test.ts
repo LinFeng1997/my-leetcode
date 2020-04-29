@@ -16,4 +16,11 @@ describe('clash pointer', () => {
     expect(findAnagrams('cbaebabacd', 'abc')).toEqual([0, 6]);
     expect(findAnagrams('abab', 'ab')).toEqual([0, 1, 2]);
   });
+
+  test('76. min window', () => {
+    const minWindow = require('../src/slidingWindow/76.minWindow');
+    expect(minWindow('ADOBECODEBANC', 'ABC')).toEqual('BANC');
+    expect(minWindow('ab', 'a')).toEqual('a');
+    expect(minWindow('abc', 'b')).toEqual('b');
+  });
 });
