@@ -12,4 +12,45 @@ describe('search', () => {
     expect(intersection([1, 2], [1, 1])).toEqual([1]);
     expect(intersection([3, 1, 2], [1, 1])).toEqual([1]);
   });
+
+  test('242. isAnagram', () => {
+    const isAnagram = require('../src/search/242.isAnagram');
+    expect(isAnagram('anagram', 'nagaram')).toEqual(true);
+    expect(isAnagram('rat', 'car')).toEqual(false);
+    expect(isAnagram('aacc', 'ccac')).toEqual(false);
+  });
+
+  test('202. isHappy', () => {
+    const isHappy = require('../src/search/202.isHappy');
+    expect(isHappy(19)).toEqual(true);
+    expect(isHappy(1)).toEqual(true);
+  });
+
+  test('290. wordPattern', () => {
+    const wordPattern = require('../src/search/290.wordPattern');
+    expect(wordPattern('abba', 'dog cat cat dog')).toEqual(true);
+    expect(wordPattern('abba', 'dog cat cat fish')).toEqual(false);
+    expect(wordPattern('aaaa', 'dog cat cat dog')).toEqual(false);
+    expect(wordPattern('abba', 'dog dog dog dog')).toEqual(false);
+  });
+
+  test('205. isIsomorphic', () => {
+    const isIsomorphic = require('../src/search/205.isIsomorphic');
+    expect(isIsomorphic('egg', 'add')).toEqual(true);
+    expect(isIsomorphic('foo', 'bar')).toEqual(false);
+    expect(isIsomorphic('paper', 'title')).toEqual(true);
+  });
+
+  test('451. frequencySort', () => {
+    const frequencySort = require('../src/search/451.frequencySort');
+    expect(['eert', 'eetr']).toContainEqual(frequencySort('tree'));
+    expect(['cccaaa']).toContainEqual(frequencySort('cccaaa'));
+    expect(['bbAa']).toContainEqual(frequencySort('Aabb'));
+    expect(['aaaaacccceeeffdb', 'aaaaacccceeeffbd']).toContainEqual(
+      frequencySort('abaccadeeefaafcc')
+    );
+    expect(['eeeeoollvtdc', 'eeeelloovtdc', 'eeeelloovtcd']).toContainEqual(
+      frequencySort('loveleetcode')
+    );
+  });
 });
