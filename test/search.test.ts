@@ -53,4 +53,10 @@ describe('search', () => {
       frequencySort('loveleetcode')
     );
   });
+
+  test('454. fourSumCount', () => {
+    const fourSumCount = require('../src/search/454.fourSumCount');
+    expect(fourSumCount([1, 2], [-2, -1], [-1, 2], [0, 2])).toEqual(2);
+    expect(fourSumCount([-1, -1], [-1, 1], [-1, 1], [1, -1])).toEqual(6);
+  });
 });

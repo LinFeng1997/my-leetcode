@@ -37,6 +37,7 @@
 290. word pattern
 205. is islsomorphic
 451. frequency sort
+454. fourSumCount
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
