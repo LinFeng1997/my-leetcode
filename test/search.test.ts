@@ -59,4 +59,30 @@ describe('search', () => {
     expect(fourSumCount([1, 2], [-2, -1], [-1, 2], [0, 2])).toEqual(2);
     expect(fourSumCount([-1, -1], [-1, 1], [-1, 1], [1, -1])).toEqual(6);
   });
+
+  test('49. groupAnagrams', () => {
+    const groupAnagrams = require('../src/search/49.groupAnagrams');
+    expect(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat'])).toEqual(
+      expect.arrayContaining([
+        expect.arrayContaining(['ate', 'eat', 'tea']),
+        expect.arrayContaining(['nat', 'tan']),
+        ['bat'],
+      ])
+    );
+
+    expect(groupAnagrams(['bdddddddddd', 'bbbbbbbbbbc'])).toEqual(
+      expect.arrayContaining([['bbbbbbbbbbc'], ['bdddddddddd']])
+    );
+  });
+
+  test('447. numberOfBoomerangs', () => {
+    const numberOfBoomerangs = require('../src/search/447.numberOfBoomerangs');
+    expect(
+      numberOfBoomerangs([
+        [0, 0],
+        [1, 0],
+        [2, 0],
+      ])
+    ).toEqual(2);
+  });
 });

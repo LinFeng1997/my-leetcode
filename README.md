@@ -38,6 +38,8 @@
 205. is islsomorphic
 451. frequency sort
 454. fourSumCount
+49. groupAnagrams
+447. numberOfBoomerangs
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
