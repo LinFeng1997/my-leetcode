@@ -40,6 +40,7 @@
 454. fourSumCount
 49. groupAnagrams
 447. numberOfBoomerangs
+149. maxPoints
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
