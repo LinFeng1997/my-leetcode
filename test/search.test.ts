@@ -88,19 +88,102 @@ describe('search', () => {
 
   test('149. maxPoints', () => {
     const maxPoints = require('../src/search/149.maxPoints');
-    expect(maxPoints([[1,1],[2,2],[3,3]])).toEqual(3);
-    expect(maxPoints([[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]])).toEqual(4);
+    expect(
+      maxPoints([
+        [1, 1],
+        [2, 2],
+        [3, 3],
+      ])
+    ).toEqual(3);
+    expect(
+      maxPoints([
+        [1, 1],
+        [3, 2],
+        [5, 3],
+        [4, 1],
+        [2, 3],
+        [1, 4],
+      ])
+    ).toEqual(4);
 
-    expect(maxPoints([[1,1],[2,2],[3,3],[1,1]])).toEqual(4); // 相同点
+    expect(
+      maxPoints([
+        [1, 1],
+        [2, 2],
+        [3, 3],
+        [1, 1],
+      ])
+    ).toEqual(4); // 相同点
 
-    expect(maxPoints([[0,0],[1,1],[0,0]])).toEqual(3); // 有斜率无穷
-    expect(maxPoints([[0,1],[0,2],[0,3]])).toEqual(3);
-    expect(maxPoints([[4,0],[4,-1],[4,5]])).toEqual(3);
+    expect(
+      maxPoints([
+        [0, 0],
+        [1, 1],
+        [0, 0],
+      ])
+    ).toEqual(3); // 有斜率无穷
+    expect(
+      maxPoints([
+        [0, 1],
+        [0, 2],
+        [0, 3],
+      ])
+    ).toEqual(3);
+    expect(
+      maxPoints([
+        [4, 0],
+        [4, -1],
+        [4, 5],
+      ])
+    ).toEqual(3);
 
-    expect(maxPoints([[1,1],[1,1],[1,1]])).toEqual(3); // 全相同点
-    expect(maxPoints([[1,1],[1,1],[1,1],[1,1],[1,1],[1,2]])).toEqual(6);
+    expect(
+      maxPoints([
+        [1, 1],
+        [1, 1],
+        [1, 1],
+      ])
+    ).toEqual(3); // 全相同点
+    expect(
+      maxPoints([
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 1],
+        [1, 2],
+      ])
+    ).toEqual(6);
 
-    expect(maxPoints([[3,1],[12,3],[3,1],[-6,-1]])).toEqual(4); // 精度
-    expect(maxPoints([[0,0],[94911151,94911150],[94911152,94911151]])).toEqual(2); // 精度
+    expect(
+      maxPoints([
+        [3, 1],
+        [12, 3],
+        [3, 1],
+        [-6, -1],
+      ])
+    ).toEqual(4); // 精度
+    expect(
+      maxPoints([
+        [0, 0],
+        [94911151, 94911150],
+        [94911152, 94911151],
+      ])
+    ).toEqual(2); // 精度
+  });
+
+  test('219. containsNearbyDuplicate', () => {
+    const containsNearbyDuplicate = require('../src/search/219.containsNearbyDuplicate');
+    expect(containsNearbyDuplicate([1, 2, 3, 1], 3)).toEqual(true);
+    expect(containsNearbyDuplicate([1, 0, 1, 1], 1)).toEqual(true);
+    expect(containsNearbyDuplicate([1, 2, 3, 1, 2, 3], 2)).toEqual(false);
+    expect(containsNearbyDuplicate([1, 2, 3, 2, 4], 2)).toEqual(true);
+  });
+
+  test('217. containsDuplicate', () => {
+    const containsDuplicate = require('../src/search/217.containsDuplicate');
+    expect(containsDuplicate([1, 2, 3, 1])).toEqual(true);
+    expect(containsDuplicate([1, 2, 3, 4])).toEqual(false);
+    expect(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])).toEqual(true);
   });
 });
