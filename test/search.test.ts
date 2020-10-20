@@ -172,6 +172,13 @@ describe('search', () => {
     ).toEqual(2); // 精度
   });
 
+    test('217. containsDuplicate', () => {
+        const containsDuplicate = require('../src/search/217.containsDuplicate');
+        expect(containsDuplicate([1, 2, 3, 1])).toEqual(true);
+        expect(containsDuplicate([1, 2, 3, 4])).toEqual(false);
+        expect(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])).toEqual(true);
+    });
+
   test('219. containsNearbyDuplicate', () => {
     const containsNearbyDuplicate = require('../src/search/219.containsNearbyDuplicate');
     expect(containsNearbyDuplicate([1, 2, 3, 1], 3)).toEqual(true);
@@ -180,10 +187,12 @@ describe('search', () => {
     expect(containsNearbyDuplicate([1, 2, 3, 2, 4], 2)).toEqual(true);
   });
 
-  test('217. containsDuplicate', () => {
-    const containsDuplicate = require('../src/search/217.containsDuplicate');
-    expect(containsDuplicate([1, 2, 3, 1])).toEqual(true);
-    expect(containsDuplicate([1, 2, 3, 4])).toEqual(false);
-    expect(containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2])).toEqual(true);
-  });
+    test('220. containsNearbyAlmostDuplicate', () => {
+        const containsNearbyAlmostDuplicate = require('../src/search/220.containsNearbyAlmostDuplicate');
+        expect(containsNearbyAlmostDuplicate([1, 2, 3, 1], 3, 0)).toEqual(true);
+        expect(containsNearbyAlmostDuplicate([1, 0, 1, 1], 1, 2)).toEqual(true);
+        expect(containsNearbyAlmostDuplicate([1, 5, 9, 1, 5, 9], 2, 3)).toEqual(
+            false
+        );
+    });
 });

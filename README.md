@@ -43,6 +43,7 @@
 149.maxPoints
 217.containsDuplicate
 219.containsNearbyDuplicate
+220.containsNearbyAlmostDuplicate
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
