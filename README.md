@@ -45,6 +45,9 @@
 219.containsNearbyDuplicate
 220.containsNearbyAlmostDuplicate
 
+### linked list
+206.reverseList
+
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
 ## Local Development
