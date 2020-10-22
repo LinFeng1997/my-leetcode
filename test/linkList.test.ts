@@ -66,4 +66,23 @@ describe('LinkList', () => {
       makeLinkList([1, 4, 3, 2, 5])
     );
   });
+
+  test('83. deleteDuplicates', () => {
+    const deleteDuplicates = require('../src/linkList/83.deleteDuplicates');
+
+    expect(deleteDuplicates(makeLinkList([1, 1, 2]))).toEqual(
+      makeLinkList([1, 2])
+    );
+    expect(deleteDuplicates(makeLinkList([1, 1, 2, 3, 3]))).toEqual(
+      makeLinkList([1, 2, 3])
+    );
+  });
+
+  test('203. removeElements', () => {
+    const removeElements = require('../src/linkList/203.removeElements');
+
+    expect(removeElements(makeLinkList([1, 2, 6, 3, 4, 5, 6]), 6)).toEqual(
+      makeLinkList([1, 2, 3, 4, 5])
+    );
+  });
 });
