@@ -85,4 +85,24 @@ describe('LinkList', () => {
       makeLinkList([1, 2, 3, 4, 5])
     );
   });
+
+  test('82. deleteDuplicates', () => {
+    const deleteDuplicates = require('../src/linkList/82.deleteDuplicates');
+
+    expect(deleteDuplicates(makeLinkList([1, 2, 3, 3, 4, 4, 5]))).toEqual(
+      makeLinkList([1, 2, 5])
+    );
+
+    expect(deleteDuplicates(makeLinkList([1, 1, 1, 2, 3]))).toEqual(
+      makeLinkList([2, 3])
+    );
+  });
+
+  test('21. mergeTwoLists', () => {
+    const mergeTwoLists = require('../src/linkList/21.mergeTwoLists');
+
+    expect(
+      mergeTwoLists(makeLinkList([1, 2, 4]), makeLinkList([1, 3, 4]))
+    ).toEqual(makeLinkList([1, 1, 2, 3, 4, 4]));
+  });
 });

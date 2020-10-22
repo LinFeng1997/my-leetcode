@@ -50,6 +50,8 @@
 92.reverseBetween
 83.deleteDuplicates
 203.removeElements
+82.deleteDuplicates
+21.mergeTwoLists
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
