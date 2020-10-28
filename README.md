@@ -53,6 +53,7 @@
 82.deleteDuplicates
 21.mergeTwoLists
 24.swapPairs
+25.reverseKGroup
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
