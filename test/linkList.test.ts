@@ -105,4 +105,28 @@ describe('LinkList', () => {
       mergeTwoLists(makeLinkList([1, 2, 4]), makeLinkList([1, 3, 4]))
     ).toEqual(makeLinkList([1, 1, 2, 3, 4, 4]));
   });
+
+  test('24. swapPairs', () => {
+    const swapPairs = require('../src/linkList/24.swapPairs');
+
+    expect(swapPairs(makeLinkList([1, 2, 3, 4]))).toEqual(
+      makeLinkList([2, 1, 4, 3])
+    );
+
+    expect(swapPairs(makeLinkList([]))).toEqual(makeLinkList([]));
+
+    expect(swapPairs(makeLinkList([1]))).toEqual(makeLinkList([1]));
+  });
+
+  test('24. swapPairs with loop', () => {
+    const swapPairs = require('../src/linkList/24.swapPairs').swapPairs2;
+
+    expect(swapPairs(makeLinkList([1, 2, 3, 4]))).toEqual(
+      makeLinkList([2, 1, 4, 3])
+    );
+
+    expect(swapPairs(makeLinkList([]))).toEqual(makeLinkList([]));
+
+    expect(swapPairs(makeLinkList([1]))).toEqual(makeLinkList([1]));
+  });
 });

@@ -52,6 +52,7 @@
 203.removeElements
 82.deleteDuplicates
 21.mergeTwoLists
+24.swapPairs
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
