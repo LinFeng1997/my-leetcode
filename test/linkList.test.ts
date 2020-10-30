@@ -169,4 +169,20 @@ describe('LinkList', () => {
       makeLinkList([2, 1])
     );
   });
+
+  test('147. insertionSortList', () => {
+    const insertionSortList = require('../src/linkList/147.insertionSortList');
+
+    expect(insertionSortList(makeLinkList([4, 2, 1, 3]))).toEqual(
+      makeLinkList([1, 2, 3, 4])
+    );
+
+    expect(insertionSortList(makeLinkList([1, 2, 3, 4]))).toEqual(
+      makeLinkList([1, 2, 3, 4])
+    );
+
+    expect(insertionSortList(makeLinkList([-1, 5, 3, 4, 0]))).toEqual(
+      makeLinkList([-1, 0, 3, 4, 5])
+    );
+  });
 });
