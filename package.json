@@ -10,7 +10,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "test:debug": "node --inspect ./node_modules/.bin/tsdx test --runInBand",
+    "test:debug": "node --inspect ./node_modules/.bin/tsdx test test/temp.test.ts --runInBand",
     "lint": "tsdx lint --fix",
     "prepare": "tsdx build"
   },

@@ -148,4 +148,25 @@ describe('LinkList', () => {
       makeLinkList([2, 1])
     );
   });
+
+  test('25. reverseKGroup with loop', () => {
+    const reverseKGroup = require('../src/linkList/25.reverseKGroup')
+      .reverseKGroupWithLoop;
+
+    expect(reverseKGroup(makeLinkList([1, 2, 3, 4, 5]), 10)).toEqual(
+      makeLinkList([1, 2, 3, 4, 5])
+    );
+
+    expect(reverseKGroup(makeLinkList([1, 2, 3, 4, 5]), 2)).toEqual(
+      makeLinkList([2, 1, 4, 3, 5])
+    );
+
+    expect(reverseKGroup(makeLinkList([1, 2, 3, 4, 5]), 3)).toEqual(
+      makeLinkList([3, 2, 1, 4, 5])
+    );
+
+    expect(reverseKGroup(makeLinkList([1, 2]), 2)).toEqual(
+      makeLinkList([2, 1])
+    );
+  });
 });
