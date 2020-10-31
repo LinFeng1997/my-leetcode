@@ -55,6 +55,7 @@
 24.swapPairs
 25.reverseKGroup
 147.insertionSortList
+148.sortList
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 

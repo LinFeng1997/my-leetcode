@@ -185,4 +185,20 @@ describe('LinkList', () => {
       makeLinkList([-1, 0, 3, 4, 5])
     );
   });
+
+  test('148. sortList', () => {
+    const sortList = require('../src/linkList/148.sortList');
+
+    expect(sortList(makeLinkList([4, 2, 1, 3]))).toEqual(
+      makeLinkList([1, 2, 3, 4])
+    );
+    //
+    expect(sortList(makeLinkList([1, 2, 3, 4]))).toEqual(
+      makeLinkList([1, 2, 3, 4])
+    );
+
+    expect(sortList(makeLinkList([-1, 5, 3, 4, 0]))).toEqual(
+      makeLinkList([-1, 0, 3, 4, 5])
+    );
+  });
 });
