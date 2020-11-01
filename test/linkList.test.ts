@@ -201,4 +201,22 @@ describe('LinkList', () => {
       makeLinkList([-1, 0, 3, 4, 5])
     );
   });
+
+  test('148. sortList with loop', () => {
+    const sortList = require('../src/linkList/148.sortList').sortListWithLoop;
+
+    expect(sortList(makeLinkList([4, 2, 1, 3]))).toEqual(
+      makeLinkList([1, 2, 3, 4])
+    );
+    //
+    expect(sortList(makeLinkList([1, 2, 3, 4]))).toEqual(
+      makeLinkList([1, 2, 3, 4])
+    );
+
+    expect(sortList(makeLinkList([-1, 5, 3, 4, 0]))).toEqual(
+      makeLinkList([-1, 0, 3, 4, 5])
+    );
+
+    expect(sortList(makeLinkList([3, 2, 4]))).toEqual(makeLinkList([2, 3, 4]));
+  });
 });
