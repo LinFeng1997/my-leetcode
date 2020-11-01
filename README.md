@@ -59,9 +59,8 @@
 237.deleteNode
 19.removeNthFromEnd
 61.rotateRight
-143
-243
-234
+143.reorderList
+234.isPalindrome
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 

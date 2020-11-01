@@ -251,4 +251,14 @@ describe('LinkList', () => {
       makeLinkList([2, 0, 1])
     );
   });
+
+  test('143. reorderList', () => {
+    const reorderList = require('../src/linkList/143.reorderList');
+    expect(reorderList(makeLinkList([1, 2, 3, 4]))).toEqual(
+      makeLinkList([1, 4, 2, 3])
+    );
+    expect(reorderList(makeLinkList([1, 2, 3, 4, 5]))).toEqual(
+      makeLinkList([1, 5, 2, 4, 3])
+    );
+  });
 });
