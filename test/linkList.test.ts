@@ -222,20 +222,15 @@ describe('LinkList', () => {
 
   test('237. deleteNode', () => {
     const deleteNode = require('../src/linkList/237.deleteNode');
-    const makeList = () => makeLinkList([4,5,1,9]);
+    const makeList = () => makeLinkList([4, 5, 1, 9]);
 
     const list1 = makeList();
     deleteNode(list1.next);
-    expect(list1).toEqual(
-        makeLinkList([4,1,9])
-    );
+    expect(list1).toEqual(makeLinkList([4, 1, 9]));
 
     const list2 = makeList();
     // @ts-ignore
     deleteNode(list2.next.next);
-    expect(list2).toEqual(
-        makeLinkList([4,5,9])
-    );
-
+    expect(list2).toEqual(makeLinkList([4, 5, 9]));
   });
 });
