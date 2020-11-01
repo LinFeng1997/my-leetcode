@@ -56,6 +56,7 @@
 25.reverseKGroup
 147.insertionSortList
 148.sortList
+237.deleteNode
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 

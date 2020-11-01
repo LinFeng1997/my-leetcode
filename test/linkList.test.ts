@@ -219,4 +219,23 @@ describe('LinkList', () => {
 
     expect(sortList(makeLinkList([3, 2, 4]))).toEqual(makeLinkList([2, 3, 4]));
   });
+
+  test('237. deleteNode', () => {
+    const deleteNode = require('../src/linkList/237.deleteNode');
+    const makeList = () => makeLinkList([4,5,1,9]);
+
+    const list1 = makeList();
+    deleteNode(list1.next);
+    expect(list1).toEqual(
+        makeLinkList([4,1,9])
+    );
+
+    const list2 = makeList();
+    // @ts-ignore
+    deleteNode(list2.next.next);
+    expect(list2).toEqual(
+        makeLinkList([4,5,9])
+    );
+
+  });
 });
