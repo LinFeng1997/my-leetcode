@@ -233,4 +233,22 @@ describe('LinkList', () => {
     deleteNode(list2.next.next);
     expect(list2).toEqual(makeLinkList([4, 5, 9]));
   });
+
+  test('19. removeNthFromEnd', () => {
+    const removeNthFromEnd = require('../src/linkList/19.removeNthFromEnd');
+    expect(removeNthFromEnd(makeLinkList([1, 2, 3, 4, 5]), 2)).toEqual(
+      makeLinkList([1, 2, 3, 5])
+    );
+    expect(removeNthFromEnd(makeLinkList([1]), 1)).toEqual(null);
+  });
+
+  test('61. rotateRight', () => {
+    const rotateRight = require('../src/linkList/61.rotateRight');
+    expect(rotateRight(makeLinkList([1, 2, 3, 4, 5]), 2)).toEqual(
+      makeLinkList([4, 5, 1, 2, 3])
+    );
+    expect(rotateRight(makeLinkList([0, 1, 2]), 4)).toEqual(
+      makeLinkList([2, 0, 1])
+    );
+  });
 });

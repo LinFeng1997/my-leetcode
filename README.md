@@ -57,6 +57,11 @@
 147.insertionSortList
 148.sortList
 237.deleteNode
+19.removeNthFromEnd
+61.rotateRight
+143
+243
+234
 
 This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
 
