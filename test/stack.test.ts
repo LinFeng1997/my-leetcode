@@ -108,4 +108,25 @@ describe('stack', () => {
 
     expect(postorderTraversal(case1)).toEqual([3, 2, 1]);
   });
+
+  test('341. postorderTraversal', () => {
+    const NestedIterator = require('../src/stack/341.NestedIterator');
+    const NestedInteger = require('../src/stack/341.NestedIterator')
+      .NestedInteger;
+
+    NestedIterator.prototype.getData = function() {
+      const res = [];
+      while (this.hasNext()) {
+        res.push(this.next());
+      }
+      return res;
+    };
+    const case1 = [[1, 1], 2, [1, 1]].map(NestedInteger.mapNestedInteger);
+
+    expect(new NestedIterator(case1).getData()).toEqual([1, 1, 2, 1, 1]);
+
+    const case2 = [[1, [4, [6]]]].map(NestedInteger.mapNestedInteger);
+
+    expect(new NestedIterator(case2).getData()).toEqual([1, 4, 6]);
+  });
 });
