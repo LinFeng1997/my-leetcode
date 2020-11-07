@@ -31,4 +31,37 @@ describe('queue', () => {
 
     expect(rightSideView(case1)).toEqual([1, 3, 4]);
   });
+
+  test('279. rightSideView', () => {
+    const numSquares = require('../src/queue/279.numSquares');
+
+    expect(numSquares(12)).toEqual(3);
+    expect(numSquares(13)).toEqual(2);
+  });
+
+  test('127. ladderLength', () => {
+    const ladderLength = require('../src/queue/127.ladderLength');
+
+    expect(
+      ladderLength('hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log', 'cog'])
+    ).toEqual(5);
+    expect(
+      ladderLength('hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log'])
+    ).toEqual(0);
+  });
+
+  test('126. findLadders', () => {
+    const ladderLength = require('../src/queue/126.findLadders');
+
+    expect(
+      ladderLength('hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log', 'cog'])
+    ).toEqual([
+      ['hit', 'hot', 'dot', 'dog', 'cog'],
+      ['hit', 'hot', 'lot', 'log', 'cog'],
+    ]);
+
+    expect(
+      ladderLength('hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log'])
+    ).toEqual([]);
+  });
 });

@@ -10,6 +10,7 @@ class TreeNode {
   }
 }
 
+// Todo: 在 dfs 遍历二叉树里的用例构造出来不对
 export const sortedArrayToBST = function(nums: any[]) {
   if (nums == null || nums.length == 0) return null;
   let len = nums.length;
