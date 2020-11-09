@@ -64,4 +64,13 @@ describe('queue', () => {
       ladderLength('hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log'])
     ).toEqual([]);
   });
+
+  test('347. topKFrequent', () => {
+    const topKFrequent = require('../src/queue/347.topKFrequent');
+    expect(topKFrequent([1, 1, 1, 2, 2, 3], 2)).toEqual([1, 2]);
+
+    expect(topKFrequent([1], 1)).toEqual([1]);
+
+    expect(topKFrequent([4,1,-1,2,-1,2,3], 2)).toEqual([-1,2]);
+  });
 });
