@@ -71,6 +71,31 @@ describe('queue', () => {
 
     expect(topKFrequent([1], 1)).toEqual([1]);
 
-    expect(topKFrequent([4,1,-1,2,-1,2,3], 2)).toEqual([-1,2]);
+    expect(topKFrequent([4, 1, -1, 2, -1, 2, 3], 2)).toEqual([-1, 2]);
+  });
+
+  test('23. mergeKLists', () => {
+    const { makeLinkList } = require('../src/linkList/util');
+    const mergeKLists = require('../src/queue/23.mergeKLists');
+
+    expect(
+      mergeKLists([
+        makeLinkList([1, 4, 5]),
+        makeLinkList([1, 3, 4]),
+        makeLinkList([2, 6]),
+      ])
+    ).toEqual(makeLinkList([1, 1, 2, 3, 4, 4, 5, 6]));
+
+    expect(mergeKLists([[]])).toEqual(null);
+
+    expect(mergeKLists([[[]]])).toEqual(null);
+
+    expect(mergeKLists([makeLinkList([0, 2, 5])])).toEqual(
+      makeLinkList([0, 2, 5])
+    );
+
+    expect(mergeKLists([makeLinkList([1]), makeLinkList([0])])).toEqual(
+      makeLinkList([0, 1])
+    );
   });
 });
