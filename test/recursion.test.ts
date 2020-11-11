@@ -25,4 +25,30 @@ describe('recursion', () => {
 
     expect(maxDepth(createTree([3, 9, 20, null, null, 15, 7]))).toBe(3);
   });
+
+  test('226. invertTree', () => {
+    const { createTree } = require('./util');
+    const invertTree = require('../src/recursion/226.invertTree');
+
+    expect(invertTree(createTree([4, 2, 7, 1, 3, 6, 9]))).toEqual(
+      createTree([4, 7, 2, 9, 6, 3, 1])
+    );
+  });
+
+  test('110. isBalanced', () => {
+    const { createTree } = require('./util');
+    const isBalanced = require('../src/recursion/110.isBalanced');
+
+    expect(isBalanced(createTree([3, 9, 20, null, null, 15, 7]))).toEqual(true);
+
+    expect(isBalanced(createTree([1, 2, 2, 3, 3, null, null, 4, 4]))).toEqual(
+      false
+    );
+
+    expect(isBalanced(null)).toEqual(true);
+
+    expect(
+      isBalanced(createTree([1, 2, 2, 3, null, null, 3, 4, null, null, 4]))
+    ).toEqual(false);
+  });
 });
