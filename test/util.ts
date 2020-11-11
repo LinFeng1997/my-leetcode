@@ -10,6 +10,40 @@ class TreeNode {
   }
 }
 
+export function createTree(dat: any[]) {
+  const len = dat.length;
+  let root: any = null;
+  let index = 0;
+  if (len > 0) root = new TreeNode(dat[index]);
+  else return null;
+
+  let queue = [];
+  queue.push(root);
+  index++;
+
+  while (index < len) {
+    if (queue.length) {
+      let cur = queue.shift();
+      if (index < len) {
+        if (dat[index] != null) {
+          cur.left = new TreeNode(dat[index]);
+          queue.push(cur.left);
+        }
+        index++;
+      }
+      if (index < len) {
+        if (dat[index] != null) {
+          cur.right = new TreeNode(dat[index]);
+          queue.push(cur.right);
+        }
+        index++;
+      }
+    }
+  }
+
+  return root;
+}
+
 // Todo: 在 dfs 遍历二叉树里的用例构造出来不对
 export const sortedArrayToBST = function(nums: any[]) {
   if (nums == null || nums.length == 0) return null;

@@ -22,4 +22,11 @@ describe('recursion', () => {
       false
     );
   });
+
+  test('34. maxDepth', () => {
+    const { sortedArrayToBST } = require('./util');
+    const maxDepth = require('../src/recursion/34.maxDepth');
+
+    expect(maxDepth(sortedArrayToBST([3, 9, 20, null, null, 15, 7]))).toBe(3);
+  });
 });
