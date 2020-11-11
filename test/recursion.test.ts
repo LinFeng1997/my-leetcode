@@ -19,9 +19,9 @@ describe('recursion', () => {
     expect(isSymmetric(createTree([1, 2, 2, null, 3, null, 3]))).toBe(false);
   });
 
-  test('34. maxDepth', () => {
+  test('104. maxDepth', () => {
     const { createTree } = require('./util');
-    const maxDepth = require('../src/recursion/34.maxDepth');
+    const maxDepth = require('../src/recursion/104.maxDepth');
 
     expect(maxDepth(createTree([3, 9, 20, null, null, 15, 7]))).toBe(3);
   });
