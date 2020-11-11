@@ -51,4 +51,28 @@ describe('recursion', () => {
       isBalanced(createTree([1, 2, 2, 3, null, null, 3, 4, null, null, 4]))
     ).toEqual(false);
   });
+
+  test('112. hasPathSum', () => {
+    const { createTree } = require('./util');
+    const hasPathSum = require('../src/recursion/112.hasPathSum');
+
+    expect(
+      hasPathSum(
+        createTree([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1]),
+        22
+      )
+    ).toEqual(true);
+
+    expect(hasPathSum(null, 0)).toEqual(false);
+  });
+
+  test('404. sumOfLeftLeaves', () => {
+    const { createTree } = require('./util');
+    const sumOfLeftLeaves = require('../src/recursion/404.sumOfLeftLeaves');
+
+    expect(sumOfLeftLeaves(createTree([3, 9, 20, null, null, 15, 7]))).toEqual(
+      24
+    );
+    expect(sumOfLeftLeaves(createTree([1, 2, 3, 4, 5]))).toEqual(4);
+  });
 });
