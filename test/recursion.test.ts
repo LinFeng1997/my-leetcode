@@ -92,13 +92,22 @@ describe('recursion', () => {
     const pathSumII = require('../src/recursion/113.pathSumII');
 
     expect(
-        pathSumII(
-            createTree([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1]),
-            22
-        )
+      pathSumII(
+        createTree([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1]),
+        22
+      )
     ).toEqual([
       [5, 4, 11, 2],
       [5, 8, 4, 5],
     ]);
+  });
+
+  test('129. sumNumbers', () => {
+    const { createTree } = require('./util');
+    const sumNumbers = require('../src/recursion/129.sumNumbers');
+
+    expect(sumNumbers(createTree([1, 2, 3]))).toEqual(25);
+
+    expect(sumNumbers(createTree([4, 9, 0, 5, 1]))).toEqual(1026);
   });
 });
