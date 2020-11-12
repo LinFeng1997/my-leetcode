@@ -75,4 +75,30 @@ describe('recursion', () => {
     );
     expect(sumOfLeftLeaves(createTree([1, 2, 3, 4, 5]))).toEqual(4);
   });
+
+  test('257. binaryTreePaths', () => {
+    const { createTree } = require('./util');
+    const binaryTreePaths = require('../src/recursion/257.binaryTreePaths');
+
+    expect(binaryTreePaths(createTree([1, 2, 3, null, 5]))).toEqual([
+      ['1->2->5', '1->3'],
+    ]);
+
+    expect(binaryTreePaths(createTree([1]))).toEqual(['1']);
+  });
+
+  test('113. pathSumII', () => {
+    const { createTree } = require('./util');
+    const pathSumII = require('../src/recursion/113.pathSumII');
+
+    expect(
+        pathSumII(
+            createTree([5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1]),
+            22
+        )
+    ).toEqual([
+      [5, 4, 11, 2],
+      [5, 8, 4, 5],
+    ]);
+  });
 });
