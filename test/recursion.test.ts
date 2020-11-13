@@ -110,4 +110,13 @@ describe('recursion', () => {
 
     expect(sumNumbers(createTree([4, 9, 0, 5, 1]))).toEqual(1026);
   });
+
+  test('437. pathSum', () => {
+    const { createTree } = require('./util');
+    const pathSum = require('../src/recursion/437.pathSum');
+
+    expect(pathSum(createTree([10,5,-3,3,2,null,11,3,-2,null,1]),8)).toEqual(3);
+    expect(pathSum(createTree([1,-2,-3,1,3,-2,null,-1]),-1)).toEqual(4);
+
+  });
 });
