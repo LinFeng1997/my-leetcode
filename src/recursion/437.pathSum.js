@@ -33,29 +33,23 @@ var pathSum = function(root, sum) {
 };
 
 function _pathSum(root, sum) {
-    // let paths = [];
     let res = 0;
 
-    const dfs = (node, path,num) => {
+    const dfs = (node,num) => {
         if (!node) return;
-
-        const newPath = [...path, node.val];
 
         let rest = num - node.val;
 
         if (rest === 0) {
-            // paths.push(newPath);
             res += 1;
-            // return;
         }
 
-        dfs(node.left, newPath,rest);
-        dfs(node.right, newPath,rest);
+        dfs(node.left,rest);
+        dfs(node.right,rest);
     };
 
-    dfs(root, [],sum);
+    dfs(root, sum);
 
-    // return paths.length;
     return res;
 };
 
