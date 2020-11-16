@@ -120,4 +120,68 @@ describe('recursion', () => {
     ).toEqual(3);
     expect(pathSum(createTree([1, -2, -3, 1, 3, -2, null, -1]), -1)).toEqual(4);
   });
+
+  describe('binary search tree', () => {
+    test('235.lowestCommonAncestor', () => {
+      const { createTree, TreeNode } = require('./util');
+      const lowestCommonAncestor = require('../src/recursion/235.lowestCommonAncestor');
+
+      expect(
+        lowestCommonAncestor(
+          createTree([6, 2, 8, 0, 4, 7, 9, null, null, 3, 5]),
+          new TreeNode(2),
+          new TreeNode(8)
+        ).val
+      ).toEqual(6);
+      expect(
+        lowestCommonAncestor(
+          createTree([6, 2, 8, 0, 4, 7, 9, null, null, 3, 5]),
+          new TreeNode(2),
+          new TreeNode(4)
+        ).val
+      ).toEqual(2);
+    });
+
+    test('98.isValidBST', () => {
+      const { createTree } = require('./util');
+      const isValidBST = require('../src/recursion/98.isValidBST');
+
+      expect(isValidBST(createTree([2, 1, 3]))).toEqual(true);
+      expect(isValidBST(createTree([5, 1, 4, null, null, 3, 6]))).toEqual(
+        false
+      );
+
+      expect(isValidBST(createTree([10, 5, 15, null, null, 6, 20]))).toEqual(
+        false
+      );
+    });
+
+    test('450. deleteNode', () => {
+      const { createTree } = require('./util');
+      const deleteNode = require('../src/recursion/450.deleteNode');
+
+      expect(deleteNode(createTree([5, 3, 6, 2, 4, null, 7]), 3)).toEqual(
+        createTree([5, 4, 6, 2, null, null, 7])
+      );
+    });
+
+    test('108. sortedArrayToBST', () => {
+      const { createTree } = require('./util');
+      const sortedArrayToBST = require('../src/recursion/108.sortedArrayToBST');
+
+      expect(sortedArrayToBST([-10, -3, 0, 5, 9])).toEqual(
+        createTree([0, -3, 9, -10, null, 5])
+      );
+    });
+
+    test('108. sortedArrayToBST', () => {
+      const { createTree } = require('./util');
+      const kthSmallest = require('../src/recursion/230.kthSmallest');
+
+      expect(kthSmallest(createTree([3, 1, 4, null, 2]), 1)).toBe(1);
+      expect(kthSmallest(createTree([5, 3, 6, 2, 4, null, null, 1]), 3)).toBe(
+        3
+      );
+    });
+  });
 });
