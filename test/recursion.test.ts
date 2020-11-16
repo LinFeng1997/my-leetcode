@@ -184,4 +184,24 @@ describe('recursion', () => {
       );
     });
   });
+
+  test('236. lowestCommonAncestor', () => {
+    const { createTree, TreeNode } = require('./util');
+    const lowestCommonAncestor = require('../src/recursion/236.lowestCommonAncestor');
+
+    expect(
+      lowestCommonAncestor(
+        createTree([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4]),
+        new TreeNode(5),
+        new TreeNode(1)
+      ).val
+    ).toEqual(3);
+    expect(
+      lowestCommonAncestor(
+        createTree([3, 5, 1, 6, 2, 0, 8, null, null, 7, 4]),
+        new TreeNode(5),
+        new TreeNode(4)
+      ).val
+    ).toEqual(5);
+  });
 });
