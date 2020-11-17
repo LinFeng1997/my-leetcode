@@ -28,7 +28,10 @@ describe('backtracking', () => {
   test('93.restoreIpAddresses', () => {
     const restoreIpAddresses = require('../src/backtracking/93.restoreIpAddresses');
 
-    expect(restoreIpAddresses('25525511135')).toEqual(['255.255.11.135', '255.255.111.35']);
+    expect(restoreIpAddresses('25525511135')).toEqual([
+      '255.255.11.135',
+      '255.255.111.35',
+    ]);
 
     expect(restoreIpAddresses('0000')).toEqual(['0.0.0.0']);
 

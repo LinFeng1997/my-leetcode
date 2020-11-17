@@ -23,11 +23,12 @@ var restoreIpAddresses = function(s) {
             return;
         }
 
-        for (let i = start; i < s.length; i++) {
-            let substring = s.substring(start, i + 1);
+        for (let len = 1; len <= 3; len++) {           // 枚举出三种切割长度
+            if (start + len - 1 >= s.length) return;     // 加上要切的长度就越界，不能切这个长度
+            let substring = s.substring(start, start + len); // 当前选择切出的片段
             if (isValid(substring)) {
                 stack.push(substring);
-                dfs(s, i + 1);
+                dfs(s, start + len);
                 stack.pop();
             }
 
