@@ -81,7 +81,8 @@ describe('recursion', () => {
     const binaryTreePaths = require('../src/recursion/257.binaryTreePaths');
 
     expect(binaryTreePaths(createTree([1, 2, 3, null, 5]))).toEqual([
-      ['1->2->5', '1->3'],
+      '1->2->5',
+      '1->3',
     ]);
 
     expect(binaryTreePaths(createTree([1]))).toEqual(['1']);
