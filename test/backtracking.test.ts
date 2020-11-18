@@ -45,4 +45,36 @@ describe('backtracking', () => {
       '101.0.2.3',
     ]);
   });
+
+  test('46.permute', () => {
+    const permute = require('../src/backtracking/46.permute');
+
+    expect(permute([1, 2, 3])).toEqual([
+      [1, 2, 3],
+      [1, 3, 2],
+      [2, 1, 3],
+      [2, 3, 1],
+      [3, 1, 2],
+      [3, 2, 1],
+    ]);
+  });
+
+  test('47.permuteUnique', () => {
+    const permuteUnique = require('../src/backtracking/47.permute');
+
+    expect(permuteUnique([1, 2, 3])).toEqual([
+      [1, 2, 3],
+      [1, 3, 2],
+      [2, 1, 3],
+      [2, 3, 1],
+      [3, 1, 2],
+      [3, 2, 1],
+    ]);
+
+    expect(permuteUnique([1, 1, 2])).toEqual([
+      [1, 1, 2],
+      [1, 2, 1],
+      [2, 1, 1],
+    ]);
+  });
 });
