@@ -107,4 +107,19 @@ describe('backtracking', () => {
       [2, 6],
     ]);
   });
+
+  test('216.combinationSum3', () => {
+    const combinationSum3 = require('../src/backtracking/216.combinationSum3');
+
+    expect(combinationSum3(3, 7)).toEqual([[1, 2, 4]]);
+
+    expect(combinationSum3(3, 9)).toEqual([
+      [1, 2, 6],
+      [1, 3, 5],
+      [2, 3, 4],
+    ]);
+
+    expect(combinationSum3(2, 18)).toEqual([]);
+    expect(combinationSum3(9, 45)).toEqual([[1, 2, 3, 4, 5, 6, 7, 8, 9]]);
+  });
 });
