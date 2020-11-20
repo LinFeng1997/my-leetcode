@@ -90,4 +90,21 @@ describe('backtracking', () => {
       [3, 4],
     ]);
   });
+
+  test('39.combinationSum', () => {
+    const combinationSum = require('../src/backtracking/39.combinationSum');
+
+    expect(combinationSum([2, 3, 6, 7], 7)).toEqual([[2, 2, 3], [7]]);
+  });
+
+  test('77.permuteUnique', () => {
+    const combinationSum2 = require('../src/backtracking/40.combinationSum2');
+
+    expect(combinationSum2([10, 1, 2, 7, 6, 1, 5], 8)).toEqual([
+      [1, 1, 6],
+      [1, 2, 5],
+      [1, 7],
+      [2, 6],
+    ]);
+  });
 });
