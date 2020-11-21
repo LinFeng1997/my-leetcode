@@ -122,4 +122,32 @@ describe('backtracking', () => {
     expect(combinationSum3(2, 18)).toEqual([]);
     expect(combinationSum3(9, 45)).toEqual([[1, 2, 3, 4, 5, 6, 7, 8, 9]]);
   });
+
+  test('78.subsets', () => {
+    const subsets = require('../src/backtracking/78.subsets');
+
+    expect(subsets([1, 2, 3])).toEqual([
+      [],
+      [1],
+      [1, 2],
+      [1, 2, 3],
+      [1, 3],
+      [2],
+      [2, 3],
+      [3],
+    ]);
+  });
+
+  test('90.subsetsWithDup', () => {
+    const subsetsWithDup = require('../src/backtracking/90.subsetsWithDup');
+
+    expect(subsetsWithDup([1, 2, 2])).toEqual([
+      [],
+      [1],
+      [1, 2],
+      [1, 2, 2],
+      [2],
+      [2, 2],
+    ]);
+  });
 });
