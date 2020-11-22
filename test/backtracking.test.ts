@@ -150,4 +150,32 @@ describe('backtracking', () => {
       [2, 2],
     ]);
   });
+
+  describe('binary', () => {
+    test('79.exist', () => {
+      const exist = require('../src/backtracking/79.exist');
+      const board = [
+        ['A', 'B', 'C', 'E'],
+        ['S', 'F', 'C', 'S'],
+        ['A', 'D', 'E', 'E'],
+      ];
+      expect(exist(board, 'ABCCED')).toEqual(true);
+
+      expect(exist(board, 'SEE')).toEqual(true);
+      expect(exist(board, 'ABCB')).toEqual(false);
+
+      expect(exist([['a']], 'a')).toEqual(true);
+
+      expect(
+        exist(
+          [
+            ['C', 'A', 'A'],
+            ['A', 'A', 'A'],
+            ['B', 'C', 'D'],
+          ],
+          'AAB'
+        )
+      ).toBe(true);
+    });
+  });
 });
