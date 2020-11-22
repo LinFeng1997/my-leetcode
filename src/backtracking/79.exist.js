@@ -4,7 +4,6 @@
  * @return {boolean}
  */
 var exist = function (board, word) {
-    let res = false;
     const visited = {};
     const m = board.length;
     const n = board[0].length;
@@ -25,7 +24,6 @@ var exist = function (board, word) {
         const char = board[row][col];
 
         if (index === word.length - 1 && char === word[index]) {
-            res = true;
             return true;
         }
 
@@ -33,11 +31,14 @@ var exist = function (board, word) {
             visited[`${row}-${col}`] = true;
 
             const direction = getDirection(row, col);// 走四个方向
-            Object.keys(direction).forEach(key => {
-                const [i, j] = direction[key];
+            const keys = Object.keys(direction);
+            for (let count = 0; count < keys.length;count++) {
+                const [i, j] = direction[keys[count]];
 
-                dfs(index + 1, i, j);
-            });
+                if (dfs(index + 1, i, j)) {
+                    return true;
+                }
+            }
 
             visited[`${row}-${col}`] = false;
         }
@@ -46,16 +47,14 @@ var exist = function (board, word) {
 
     for (let i = 0; i < board.length; i++) {
         for (let j = 0; j < board[i].length; j++) {
-            dfs(0, i, j);
-
-            if (res === true) {
-                return res;
+            if (dfs(0, i, j)) {
+                return true;
             }
         }
 
     }
 
-    return res;
+    return false;
 };
 
 function getDirection(i, j) {
