@@ -13,14 +13,20 @@ var exist = function (board, word) {
         return visited[`${i}-${j}`];
     }
 
+    function inArea(i,j) {
+        return !(i < 0 || j < 0 || i >= m || j >= n);
+    }
+
     function dfs(index, row, col) {
+        if (!inArea(row,col) || isUsed(row,col)) {
+            return;
+        }
+
         const char = board[row][col];
 
-        if (index === word.length - 1) {
-            if (char === word[index]) {
-                res = true;
-                return;
-            }
+        if (index === word.length - 1 && char === word[index]) {
+            res = true;
+            return true;
         }
 
         if (char === word[index]) {
@@ -29,13 +35,6 @@ var exist = function (board, word) {
             const direction = getDirection(row, col);// 走四个方向
             Object.keys(direction).forEach(key => {
                 const [i, j] = direction[key];
-
-                if (i < 0 || j < 0 || i >= m || j >= n) {
-                    return;
-                }
-                if (isUsed(i, j)) {
-                    return;
-                }
 
                 dfs(index + 1, i, j);
             });
