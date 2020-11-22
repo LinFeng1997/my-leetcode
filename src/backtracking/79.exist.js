@@ -31,9 +31,8 @@ var exist = function (board, word) {
             visited[`${row}-${col}`] = true;
 
             const direction = getDirection(row, col);// 走四个方向
-            const keys = Object.keys(direction);
-            for (let count = 0; count < keys.length;count++) {
-                const [i, j] = direction[keys[count]];
+            for (let count = 0; count < direction.length;count++) {
+                const [i, j] = direction[count];
 
                 if (dfs(index + 1, i, j)) {
                     return true;
@@ -58,13 +57,12 @@ var exist = function (board, word) {
 };
 
 function getDirection(i, j) {
-    const direction = {
-        left: [i, j - 1],
-        right: [i, j + 1],
-        up: [i - 1, j],
-        down: [i + 1, j]
-    };
-    return direction;
+    return [
+        [i, j - 1],// left
+        [i, j + 1],// right
+        [i - 1, j],// up
+        [i + 1, j],// down
+    ];
 }
 
 module.exports = exist;
