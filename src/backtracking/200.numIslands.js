@@ -5,6 +5,12 @@
 var numIslands = function(grid) {
     let res = 0;
     const visited = {};
+    const m = grid.length;
+    const n = grid[0].length;
+
+    function inArea(i,j) {
+        return !(i < 0 || j < 0 || i >= m || j >= n);
+    }
 
     function isUsed(i, j) {
         return visited[`${i}-${j}`];
@@ -19,10 +25,7 @@ var numIslands = function(grid) {
         direction.forEach(item => {
             const [i, j] = item;
 
-            if (i < 0 || j < 0 || i >= grid.length) {
-                return;
-            }
-            if (isUsed(i, j)) {
+            if (!inArea(i,j) || isUsed(i,j)) {
                 return;
             }
             const char = grid[i][j];
