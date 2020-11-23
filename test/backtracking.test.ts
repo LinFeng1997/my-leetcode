@@ -266,14 +266,50 @@ describe('backtracking', () => {
       const pacificAtlantic = require('../src/backtracking/417.pacificAtlantic');
 
       expect(
-          pacificAtlantic([
-            [1, 2, 2, 3,5],
-            [3, 2, 3, 4,4],
-            [2, 4, 5, 3,1],
-            [6, 7, 1, 4,5],
-            [5, 1, 1, 2,4],
-          ])
-      ).toEqual([[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]);
+        pacificAtlantic([
+          [1, 2, 2, 3, 5],
+          [3, 2, 3, 4, 4],
+          [2, 4, 5, 3, 1],
+          [6, 7, 1, 4, 5],
+          [5, 1, 1, 2, 4],
+        ])
+      ).toEqual([
+        [0, 4],
+        [1, 3],
+        [1, 4],
+        [2, 2],
+        [3, 0],
+        [3, 1],
+        [4, 0],
+      ]);
+    });
+
+    test('51.solveNQueens', () => {
+      const solveNQueens = require('../src/backtracking/51.solveNQueens');
+
+      expect(solveNQueens(4)).toEqual([
+        [
+          '.Q..', // 解法 1
+          '...Q',
+          'Q...',
+          '..Q.',
+        ],
+
+        [
+          '..Q.', // 解法 2
+          'Q...',
+          '...Q',
+          '.Q..',
+        ],
+      ]);
+    });
+
+    test('52.totalNQueens', () => {
+      const solveNQueens = require('../src/backtracking/52.totalNQueens');
+
+      expect(solveNQueens(4)).toEqual(
+          2
+      );
     });
   });
 });
