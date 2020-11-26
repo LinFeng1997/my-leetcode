@@ -64,4 +64,19 @@ describe('dynamic planning', () => {
       ])
     ).toBe(0);
   });
+
+  test('343.integerBreak', () => {
+    const integerBreak = require('../src/dynamicPlanning/343.integerBreak');
+
+    expect(integerBreak(2)).toBe(1);
+
+    expect(integerBreak(10)).toBe(36);
+  });
+
+  test('279. rightSideView', () => {
+    const numSquares = require('../src/queue/279.numSquares');
+
+    expect(numSquares(12)).toEqual(3);
+    expect(numSquares(13)).toEqual(2);
+  });
 });
