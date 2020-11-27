@@ -73,10 +73,20 @@ describe('dynamic planning', () => {
     expect(integerBreak(10)).toBe(36);
   });
 
-  test('279. rightSideView', () => {
-    const numSquares = require('../src/queue/279.numSquares');
+    test('279. numSquares', () => {
+        const numSquares = require('../src/dynamicPlanning/279.numSquares');
 
-    expect(numSquares(12)).toEqual(3);
-    expect(numSquares(13)).toEqual(2);
-  });
+        expect(numSquares(12)).toEqual(3);
+        expect(numSquares(13)).toEqual(2);
+    });
+
+    test('91. numDecodings', () => {
+        const numDecodings = require('../src/dynamicPlanning/91.numDecodings');
+
+        expect(numDecodings("12")).toEqual(2);
+        expect(numDecodings("226")).toEqual(3);
+        expect(numDecodings("0")).toEqual(0);
+        expect(numDecodings("1")).toEqual(1);
+        expect(numDecodings("2")).toEqual(1);
+    });
 });

@@ -12,6 +12,8 @@ var numSquares = function(n) {
             dp[i] = Math.min(dp[i], dp[i - j * j] + 1); // 动态转移方程
         }
     }
+
+    return dp[n];
 };
 
 
