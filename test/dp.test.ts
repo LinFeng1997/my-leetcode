@@ -104,4 +104,18 @@ describe('dynamic planning', () => {
     expect(rob([2, 3, 2])).toEqual(3);
     expect(rob([1])).toEqual(1);
   });
+
+  test('337.rob', () => {
+    const rob = require('../src/dynamicPlanning/337.rob');
+    const { createTree } = require('./util');
+
+    expect(rob(createTree([3, 2, 3, null, 3, null, 1]))).toEqual(7);
+    expect(rob(createTree([3, 4, 5, 1, 3, null, 1]))).toEqual(9);
+  });
+
+  test('309.maxProfit', () => {
+    const maxProfit = require('../src/dynamicPlanning/309.maxProfit');
+
+    expect(maxProfit([1, 2, 3, 0, 2])).toBe(3);
+  });
 });
