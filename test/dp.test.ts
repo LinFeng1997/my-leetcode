@@ -89,4 +89,21 @@ describe('dynamic planning', () => {
     expect(numDecodings('1')).toEqual(1);
     expect(numDecodings('2')).toEqual(1);
   });
+
+  test('198.rob', () => {
+    const rob = require('../src/dynamicPlanning/198.rob');
+
+    expect(rob([1,2,3,1])).toEqual(4);
+    expect(rob([2,7,9,3,1])).toEqual(12);
+
+  });
+
+  test('213.rob', () => {
+    const rob = require('../src/dynamicPlanning/213.rob');
+
+    expect(rob([1,2,3,1])).toEqual(4);
+    expect(rob([2,3,2])).toEqual(3);
+    expect(rob([1])).toEqual(1);
+
+  });
 });
