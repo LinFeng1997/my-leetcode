@@ -118,4 +118,10 @@ describe('dynamic planning', () => {
 
     expect(maxProfit([1, 2, 3, 0, 2])).toBe(3);
   });
+
+  test('knapsack01', () => {
+    const knapsack01 = require('../src/dynamicPlanning/0-1-pack');
+
+    expect(knapsack01([1,2,3],[6,10,12],5)).toBe(22);
+  });
 });
