@@ -1,31 +1,20 @@
 function knapsack01(w,v,c) {
     let n = w.length;
     if (!n) return 0;
-    const dp = makeBinaryArray(n,c); // dp[i][j] 表示放 v[i] 时，不超过 j 容量，最大的价值
+    const dp = new Array(c + 1).fill(0); // dp[i] 表示放 v[i] 时，不超过 i 容量，最大的价值
 
     for (let j = 0;j <= c;j++) {
-        dp[0][j] = j >= w[0] ? v[0] : 0;
+        dp[j] = j >= w[0] ? v[0] : 0;
     }
 
     for (let i = 1; i < n; i++) {
-        for (let j = 0; j <= c; j++) {
-            dp[i][j] = dp[i - 1][j];
-
-            const diff = j - w[i];
-            if (diff >= 0) {
-                dp[i][j] = Math.max(dp[i][j], v[i] + dp[i - 1][diff])
-            }
+        for (let j = c; j >= w[i]; j--) {
+            // 放了 v[i],容量仍然没有超
+            dp[j] = Math.max(dp[j], v[i] + dp[j - w[i]]);
         }
     }
 
-
-    return dp[n - 1][c];
-}
-
-function makeBinaryArray(m, n) {
-    let arr = new Array(m).fill(null);
-
-    return arr.map(_ => new Array(n).fill(0));
+    return dp[c];
 }
 
 // F(i,c) = max(F(i-1,c), v(i) + F(i-1,c - w(i)))
