@@ -18,4 +18,5 @@ function knapsack01(w,v,c) {
 }
 
 // F(i,c) = max(F(i-1,c), v(i) + F(i-1,c - w(i)))
+// F(j) = max(F(j), v(i) + F(j - w(i)))
 module.exports = knapsack01;
