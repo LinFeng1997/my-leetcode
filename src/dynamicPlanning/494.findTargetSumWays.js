@@ -22,12 +22,12 @@ var findTargetSumWays = function (nums, S) {
     for (let i = 1; i < n; i++) {
         for (let j = -max; j <= max; j++) {
 
-            if (isValid(j + nums[i])) {
-                dp[i][j + max] += dp[i - 1][j + nums[i] + max]
+            if (isValid(j)) {
+                dp[i][j - nums[i] + max] += dp[i - 1][j + max]
             }
 
-            if (isValid(j - nums[i])) {
-                dp[i][j + max] += dp[i - 1][j - nums[i] + max]
+            if (isValid(j)) {
+                dp[i][j + nums[i] + max] += dp[i - 1][j + max]
             }
         }
     }
@@ -44,5 +44,8 @@ function makeBinaryArray(m, n) {
 // dp[i][j] 表示字符串 nums 前 i+1 个元素和为 j 的组合数
 // dp[i][j] = dp[i - 1][j - nums[i]] + dp[i - 1][j + nums[i]]
 // dp[i][j] += dp[i - 1][j - nums[i]] + dp[i - 1][j + nums[i]]
+
+// dp[i][j] += dp[i - 1][j + nums[i]]
+// dp[i][j] += dp[i - 1][j - nums[i]]
 
 module.exports = findTargetSumWays;
