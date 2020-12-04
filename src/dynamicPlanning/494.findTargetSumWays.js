@@ -24,9 +24,6 @@ var findTargetSumWays = function (nums, S) {
 
             if (isValid(j)) {
                 dp[i][j - nums[i] + max] += dp[i - 1][j + max]
-            }
-
-            if (isValid(j)) {
                 dp[i][j + nums[i] + max] += dp[i - 1][j + max]
             }
         }
@@ -47,5 +44,8 @@ function makeBinaryArray(m, n) {
 
 // dp[i][j] += dp[i - 1][j + nums[i]]
 // dp[i][j] += dp[i - 1][j - nums[i]]
+
+// dp[i][j - nums[i] + max] += dp[i - 1][j + max]
+// dp[i][j + nums[i] + max] += dp[i - 1][j + max]
 
 module.exports = findTargetSumWays;
