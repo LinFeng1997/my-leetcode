@@ -150,7 +150,15 @@ describe('dynamic planning', () => {
   test('474.findMaxForm', () => {
     const findMaxForm = require('../src/dynamicPlanning/474.findMaxForm');
 
-    expect(findMaxForm(["10", "0001", "111001", "1", "0"], 5,3)).toBe(4);
-    expect(findMaxForm(["10", "0", "1"], 1,1)).toBe(2);
+    expect(findMaxForm(['10', '0001', '111001', '1', '0'], 5, 3)).toBe(4);
+    expect(findMaxForm(['10', '0', '1'], 1, 1)).toBe(2);
+  });
+
+  test('139.wordBreak', () => {
+    const wordBreak = require('../src/dynamicPlanning/139.wordBreak');
+
+    expect(wordBreak("leetcode",["leet", "code"])).toBe(true);
+    expect(wordBreak("applepenapple",["apple", "pen"])).toBe(true);
+    expect(wordBreak("catsandog",["cats", "dog", "sand", "and", "cat"])).toBe(false);
   });
 });
