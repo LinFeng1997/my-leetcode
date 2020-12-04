@@ -124,4 +124,20 @@ describe('dynamic planning', () => {
 
     expect(knapsack01([1, 2, 3], [6, 10, 12], 5)).toBe(22);
   });
+
+  test('416.canPartition', () => {
+    const canPartition = require('../src/dynamicPlanning/416.canPartition');
+
+    expect(canPartition([1, 5, 11, 5])).toBe(true)
+    expect(canPartition([1, 2, 3, 5])).toBe(false);
+  });
+
+  test('322.coinChange', () => {
+    const coinChange = require('../src/dynamicPlanning/322.coinChange');
+
+    expect(coinChange([1, 2,5],11)).toBe(3)
+    expect(coinChange([2],3)).toBe(-1)
+    expect(coinChange([1],0)).toBe(0)
+    expect(coinChange([1],2)).toBe(2)
+  });
 });
