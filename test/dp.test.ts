@@ -157,8 +157,10 @@ describe('dynamic planning', () => {
   test('139.wordBreak', () => {
     const wordBreak = require('../src/dynamicPlanning/139.wordBreak');
 
-    expect(wordBreak("leetcode",["leet", "code"])).toBe(true);
-    expect(wordBreak("applepenapple",["apple", "pen"])).toBe(true);
-    expect(wordBreak("catsandog",["cats", "dog", "sand", "and", "cat"])).toBe(false);
+    expect(wordBreak('leetcode', ['leet', 'code'])).toBe(true);
+    expect(wordBreak('applepenapple', ['apple', 'pen'])).toBe(true);
+    expect(wordBreak('catsandog', ['cats', 'dog', 'sand', 'and', 'cat'])).toBe(
+      false
+    );
   });
 });

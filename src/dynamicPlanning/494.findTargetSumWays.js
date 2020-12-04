@@ -3,29 +3,36 @@
  * @param {number} S
  * @return {number}
  */
-var findTargetSumWays = function(nums, S) {
+var findTargetSumWays = function (nums, S) {
     if (S > 1000) return 0;
     const n = nums.length;
+    const max = nums.reduce((pre, cur) => {
+        return pre + cur;
+    }, 0);
 
-    const dp = makeBinaryArray(n,2001);
+    const dp = makeBinaryArray(n, max * 2 + 1);
     // 防止数组下标为负数
-    dp[0][nums[0] + 1000] = 1;
-    dp[0][-nums[0] + 1000] += 1; // nums[0] 为 0 的情况
+    dp[0][nums[0] + max] = 1;
+    dp[0][-nums[0] + max] += 1; // nums[0] 为 0 的情况
+
+    function isValid(value) {
+        return value >= -max && value <= max;
+    }
 
     for (let i = 1; i < n; i++) {
-        for (let j = -1000; j <= 1000; j++) {
-            // dp[i][j + 1000] += dp[i - 1][j - nums[i] + 1000] + dp[i - 1][j + nums[i] + 1000]
-            const sum = j;
-            
-            if (dp[i - 1][sum + 1000] > 0){
-                // 分别代入 j - nums[i] 和 j + nums[i]
-                dp[i][sum + nums[i] + 1000] += dp[i - 1][sum + 1000];
-                dp[i][sum - nums[i] + 1000] += dp[i - 1][sum + 1000];
+        for (let j = -max; j <= max; j++) {
+
+            if (isValid(j + nums[i])) {
+                dp[i][j + max] += dp[i - 1][j + nums[i] + max]
+            }
+
+            if (isValid(j - nums[i])) {
+                dp[i][j + max] += dp[i - 1][j - nums[i] + max]
             }
         }
     }
 
-    return dp[n - 1][S + 1000];
+    return dp[n - 1][S + max] || 0;
 };
 
 function makeBinaryArray(m, n) {
