@@ -15,14 +15,14 @@ var findTargetSumWays = function (nums, S) {
     dp[0][nums[0] + max] = 1;
     dp[0][-nums[0] + max] += 1; // nums[0] 为 0 的情况
 
-    function isValid(value) {
-        return value >= -max && value <= max;
-    }
+    // function isValid(value) {
+    //     return value >= -max && value <= max;
+    // }
 
     for (let i = 1; i < n; i++) {
         for (let j = -max; j <= max; j++) {
 
-            if (isValid(j)) {
+            if (dp[i - 1][j + max]) {
                 dp[i][j - nums[i] + max] += dp[i - 1][j + max]
                 dp[i][j + nums[i] + max] += dp[i - 1][j + max]
             }
