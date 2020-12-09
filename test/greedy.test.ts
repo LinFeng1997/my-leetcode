@@ -12,4 +12,24 @@ describe('greedy', () => {
     expect(isSubsequence('abc', 'ahbgdc')).toBe(true);
     expect(isSubsequence('axc', 'ahbgdc')).toBe(false);
   });
+
+  test('435.eraseOverlapIntervals', () => {
+    const eraseOverlapIntervals = require('../src/greedy/435.eraseOverlapIntervals');
+    //
+    expect(
+        eraseOverlapIntervals([
+          [1, 2],
+          [2, 3],
+          [3, 4],
+          [1, 3],
+        ])
+    ).toBe(1);
+    expect(
+        eraseOverlapIntervals([
+          [1, 2],
+          [1, 2],
+          [1, 2],
+        ])
+    ).toBe(2);
+  });
 });
