@@ -43,3 +43,27 @@ export function createTree(dat: any[]) {
 
   return root;
 }
+
+export class ListNode {
+  val: any;
+  next: ListNode | null;
+
+  constructor(val: any) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+export const makeLinkList = (arr: number[]) => {
+  let cur = new ListNode(arr[0]);
+  let head = cur;
+
+  for (let i = 1; i < arr.length; i++) {
+    const node = new ListNode(arr[i]);
+    cur.next = node;
+    cur = node;
+  }
+
+  cur.next = null;
+  return head;
+};
