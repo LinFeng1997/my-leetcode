@@ -264,21 +264,18 @@ describe('LinkList', () => {
 
   test('2.addTwoNumbers', () => {
     const addTwoNumbers = require('../src/linkList/2.addTwoNumbers');
-    const {makeLinkList} = require('./util');
+    const { makeLinkList } = require('./util');
 
     //
     expect(
-        addTwoNumbers(makeLinkList([2,4,3]),makeLinkList(([5,6,4])))
-    ).toEqual(
-        makeLinkList([7,0,8])
-    );
+      addTwoNumbers(makeLinkList([2, 4, 3]), makeLinkList([5, 6, 4]))
+    ).toEqual(makeLinkList([7, 0, 8]));
 
     expect(
-        addTwoNumbers(makeLinkList([9,9,9,9,9,9,9]),makeLinkList(([9,9,9,9])))
-    ).toEqual(
-        makeLinkList([8,9,9,9,0,0,0,1])
-    );
-
-
+      addTwoNumbers(
+        makeLinkList([9, 9, 9, 9, 9, 9, 9]),
+        makeLinkList([9, 9, 9, 9])
+      )
+    ).toEqual(makeLinkList([8, 9, 9, 9, 0, 0, 0, 1]));
   });
 });
