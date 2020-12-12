@@ -195,4 +195,34 @@ describe('search', () => {
       false
     );
   });
+
+  test('4.findMedianSortedArrays', () => {
+        const findMedianSortedArrays = require('../src/search/4.findMedianSortedArrays');
+
+        //
+        expect(
+            findMedianSortedArrays([1,3],[2])
+        ).toEqual(2);
+
+        expect(
+            findMedianSortedArrays([1,2],[3,4])
+        ).toEqual(2.5);
+
+
+        expect(
+            findMedianSortedArrays([0,0],[0,0])
+        ).toEqual(0);
+
+        expect(
+            findMedianSortedArrays([],[1])
+        ).toEqual(1);
+
+        expect(
+            findMedianSortedArrays([2],[])
+        ).toEqual(2);
+
+        expect(
+            findMedianSortedArrays([1,3,4,9],[1,2,3,4,5,6,7,8,9])
+        ).toEqual(4);
+    });
 });
