@@ -1,11 +1,9 @@
 describe('string', () => {
-    test('5.longestPalindrome', () => {
-        const longestPalindrome = require('../src/dynamicPlanning/5.longestPalindrome');
+    test('6.convert', () => {
+        const convert = require('../src/string/6.convert');
 
         //
-        expect(longestPalindrome("babad")).toEqual("bab");
-        expect(longestPalindrome("cbbd")).toEqual("bb");
-        expect(longestPalindrome("aacabdkacaa")).toEqual("aca");
-
+        expect(convert('LEETCODEISHIRING',3)).toEqual('LCIRETOESIIGEDHN');
+        expect(convert('LEETCODEISHIRING',4)).toEqual('LDREOEIIECIHNTSG');
     });
 });

@@ -178,4 +178,13 @@ describe('dynamic planning', () => {
     expect(wiggleMaxLength([1, 2, 3, 4, 5, 6, 7, 8, 9])).toBe(2);
     expect(wiggleMaxLength([0, 0])).toBe(1);
   });
+
+  test('5.longestPalindrome', () => {
+    const longestPalindrome = require('../src/dynamicPlanning/5.longestPalindrome');
+
+    //
+    expect(longestPalindrome('babad')).toEqual('bab');
+    expect(longestPalindrome('cbbd')).toEqual('bb');
+    expect(longestPalindrome('aacabdkacaa')).toEqual('aca');
+  });
 });
