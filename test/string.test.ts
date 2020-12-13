@@ -11,9 +11,9 @@ describe('string', () => {
     const myAtoi = require('../src/string/8.myAtoi');
 
     //
-    expect(myAtoi("42")).toEqual(42);
-    expect(myAtoi("   -42")).toEqual(-42);
-    expect(myAtoi("words and 987")).toEqual(0);
-    expect(myAtoi("-91283472332")).toEqual(-2147483648);
+    expect(myAtoi('42')).toEqual(42);
+    expect(myAtoi('   -42')).toEqual(-42);
+    expect(myAtoi('words and 987')).toEqual(0);
+    expect(myAtoi('-91283472332')).toEqual(-2147483648);
   });
 });
