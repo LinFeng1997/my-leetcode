@@ -3143,4 +3143,11 @@ describe('array', () => {
       expect.arrayContaining([0, 0, 1, 1, 2, 3, 3])
     );
   });
+
+  test('16.threeSumClosest', () => {
+    const threeSumClosest = require('../src/array/16.threeSumClosest');
+
+    //
+    expect(threeSumClosest([-1,2,1,-4],1)).toEqual(2);
+  });
 });

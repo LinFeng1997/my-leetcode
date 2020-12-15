@@ -16,4 +16,12 @@ describe('string', () => {
     expect(myAtoi('words and 987')).toEqual(0);
     expect(myAtoi('-91283472332')).toEqual(-2147483648);
   });
+
+  test('14.longestCommonPrefix', () => {
+    const longestCommonPrefix = require('../src/string/14.longestCommonPrefix');
+
+    //
+    expect(longestCommonPrefix(["flower","flow","flight"])).toEqual('fl');
+    expect(longestCommonPrefix(["dog","racecar","car"])).toEqual('');
+  });
 });
