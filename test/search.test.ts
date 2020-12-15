@@ -214,4 +214,15 @@ describe('search', () => {
       findMedianSortedArrays([1, 3, 4, 9], [1, 2, 3, 4, 5, 6, 7, 8, 9])
     ).toEqual(4);
   });
+
+  test('13.romanToInt', () => {
+    const romanToInt = require('../src/search/13.romanToInt');
+
+    //
+    expect(romanToInt('III')).toEqual(3);
+    expect(romanToInt('IV')).toEqual(4);
+    expect(romanToInt('IX')).toEqual(9);
+    expect(romanToInt('LVIII')).toEqual(58);
+    expect(romanToInt('MCMXCIV')).toEqual(1994);
+  });
 });

@@ -192,11 +192,11 @@ describe('dynamic planning', () => {
     const isMatch = require('../src/dynamicPlanning/10.isMatch');
 
     //
-    expect(isMatch("aa","a")).toEqual(false);
-    expect(isMatch("aa","a*")).toEqual(true);
-    expect(isMatch("ab",".*")).toEqual(true);
-    expect(isMatch("aab","c*a*b*")).toEqual(true);
-    expect(isMatch("mississippi","mis*is*p*.")).toEqual(false);
-    expect(isMatch("aaa",".*")).toEqual(true);
+    expect(isMatch('aa', 'a')).toEqual(false);
+    expect(isMatch('aa', 'a*')).toEqual(true);
+    expect(isMatch('ab', '.*')).toEqual(true);
+    expect(isMatch('aab', 'c*a*b*')).toEqual(true);
+    expect(isMatch('mississippi', 'mis*is*p*.')).toEqual(false);
+    expect(isMatch('aaa', '.*')).toEqual(true);
   });
 });
