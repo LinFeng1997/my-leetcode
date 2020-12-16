@@ -21,7 +21,7 @@ describe('string', () => {
     const longestCommonPrefix = require('../src/string/14.longestCommonPrefix');
 
     //
-    expect(longestCommonPrefix(["flower","flow","flight"])).toEqual('fl');
-    expect(longestCommonPrefix(["dog","racecar","car"])).toEqual('');
+    expect(longestCommonPrefix(['flower', 'flow', 'flight'])).toEqual('fl');
+    expect(longestCommonPrefix(['dog', 'racecar', 'car'])).toEqual('');
   });
 });

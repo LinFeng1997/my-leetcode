@@ -337,5 +337,18 @@ describe('backtracking', () => {
         ['3', '4', '5', '2', '8', '6', '1', '7', '9'],
       ]);
     });
+
+    test('22.generateParenthesis', () => {
+      const generateParenthesis = require('../src/backtracking/22.generateParenthesis');
+
+      //
+      expect(generateParenthesis(3)).toEqual([
+        "((()))",
+        "(()())",
+        "(())()",
+        "()(())",
+        "()()()"
+      ]);
+    });
   });
 });

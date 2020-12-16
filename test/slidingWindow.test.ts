@@ -23,4 +23,14 @@ describe('clash pointer', () => {
     expect(minWindow('ab', 'a')).toEqual('a');
     expect(minWindow('abc', 'b')).toEqual('b');
   });
+
+  test('28.strStr', () => {
+    const strStr = require('../src/slidingWindow/28.strStr');
+
+    //
+    expect(strStr( "hello","ll")).toEqual(2);
+    expect(strStr( "aaaaa","bba")).toEqual(-1);
+    expect(strStr( "","")).toEqual(0);
+    expect(strStr( "a","a")).toEqual(0);
+  });
 });
