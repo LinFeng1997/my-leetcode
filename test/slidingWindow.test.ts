@@ -33,4 +33,14 @@ describe('clash pointer', () => {
     expect(strStr('', '')).toEqual(0);
     expect(strStr('a', 'a')).toEqual(0);
   });
+
+  test('30.findSubstring', () => {
+    const findSubstring = require('../src/slidingWindow/30.findSubstring');
+
+    //
+    expect(findSubstring('barfoothefoobarman', ['foo', 'bar'])).toEqual([0, 9]);
+    expect(findSubstring('wordgoodgoodgoodbestword', ['foo', 'bar'])).toEqual(
+        []
+    );
+  });
 });
