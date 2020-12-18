@@ -11,15 +11,15 @@ function divide(dividend, divisor) {
     for (let i = 0; i < strdiv.length; i++) {
         strRemainder += strdiv[i];
 
-        let [remainder,count] = divideRemainder(parseInt(strRemainder), divisor)
+        let [remainder, count] = divideRemainder(parseInt(strRemainder), divisor)
 
-        strRes +=  count// 巧妙运用十进制，字符串长度等效次方
+        strRes += count // 巧妙运用十进制，字符串长度等效次方
         strRemainder = String(remainder)
     }
 
     res = sign * parseInt(strRes);
     if (Math.abs(res >= 2147483648)) {
-      res = sign * 2147483647
+        res = sign * 2147483647
     }
     return res
 }
@@ -31,7 +31,7 @@ function divideRemainder(remainder, divisor) { // 除法用减法替代进行的
         count++
     }
 
-    return [remainder,count];
+    return [remainder, count];
 }
 
 module.exports = divide;

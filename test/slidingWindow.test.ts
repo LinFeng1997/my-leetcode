@@ -40,7 +40,7 @@ describe('clash pointer', () => {
     //
     expect(findSubstring('barfoothefoobarman', ['foo', 'bar'])).toEqual([0, 9]);
     expect(findSubstring('wordgoodgoodgoodbestword', ['foo', 'bar'])).toEqual(
-        []
+      []
     );
   });
 });
