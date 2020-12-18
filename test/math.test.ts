@@ -17,4 +17,13 @@ describe('math', () => {
     expect(isPalindrome(-121)).toEqual(false);
     expect(isPalindrome(10)).toEqual(false);
   });
+
+  test('29.divide', () => {
+    const divide = require('../src/math/29.divide');
+
+    //
+    expect(divide(10, 3)).toEqual(3);
+    expect(divide(7, -3)).toEqual(-2);
+    expect(divide(-2147483648, -1)).toEqual(2147483647);
+  });
 });
