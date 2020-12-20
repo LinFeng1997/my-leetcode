@@ -89,4 +89,14 @@ describe('stack', () => {
 
     expect(new NestedIterator(case2).getData()).toEqual([1, 4, 6]);
   });
+
+  test('32.longestValidParentheses', () => {
+    const longestValidParentheses = require('../src/stack/32.longestValidParentheses');
+
+    //
+    expect(longestValidParentheses("(()")).toEqual(2);
+    expect(longestValidParentheses(")()())")).toEqual(4);
+    expect(longestValidParentheses("()")).toEqual(2);
+    expect(longestValidParentheses("()))))))))))()")).toEqual(2);
+  });
 });
