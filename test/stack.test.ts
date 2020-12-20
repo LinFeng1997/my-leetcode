@@ -94,9 +94,9 @@ describe('stack', () => {
     const longestValidParentheses = require('../src/stack/32.longestValidParentheses');
 
     //
-    expect(longestValidParentheses("(()")).toEqual(2);
-    expect(longestValidParentheses(")()())")).toEqual(4);
-    expect(longestValidParentheses("()")).toEqual(2);
-    expect(longestValidParentheses("()))))))))))()")).toEqual(2);
+    expect(longestValidParentheses('(()')).toEqual(2);
+    expect(longestValidParentheses(')()())')).toEqual(4);
+    expect(longestValidParentheses('()')).toEqual(2);
+    expect(longestValidParentheses('()))))))))))()')).toEqual(2);
   });
 });
