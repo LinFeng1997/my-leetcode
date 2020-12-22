@@ -225,4 +225,37 @@ describe('search', () => {
     expect(romanToInt('LVIII')).toEqual(58);
     expect(romanToInt('MCMXCIV')).toEqual(1994);
   });
+
+    test('33.search', () => {
+        const search = require('../src/search/33.search');
+
+        //
+        expect(search([4, 5, 6, 7, 0, 1, 2], 0)).toEqual(4);
+        expect(search([4, 5, 6, 7, 1, 2, 3], 1)).toEqual(4);
+
+        expect(search([4, 5, 6, 7, 1, 2, 3], 5)).toEqual(1);
+        expect(search([4, 5, 6, 7, 0, 1, 2], 3)).toEqual(-1);
+        expect(search([6, 7, 0, 1, 2, 3, 4, 5], 3)).toEqual(5);
+        expect(search([6, 7, 0, 1, 2, 3, 4, 5], 6)).toEqual(0);
+    });
+
+    test('34.searchRange', () => {
+        const searchRange = require('../src/search/34.searchRange');
+
+        //
+        expect(searchRange([5, 7, 7, 8, 8], 8)).toEqual([3, 4]);
+        expect(searchRange([5, 7, 7, 8, 8], 6)).toEqual([-1, -1]);
+        expect(searchRange([], 0)).toEqual([-1, -1]);
+        expect(searchRange([1], 1)).toEqual([0, 0]);
+    });
+
+    test('35.searchInsert', () => {
+        const searchInsert = require('../src/search/35.searchInsert');
+
+        //
+        expect(searchInsert([1,3,5,6],5)).toEqual(2);
+        expect(searchInsert([1,3,5,6],2)).toEqual(1);
+        expect(searchInsert([1,3,5,6],7)).toEqual(4);
+        expect(searchInsert([1,3,5,6],0)).toEqual(0);
+    });
 });
