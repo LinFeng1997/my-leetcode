@@ -31,7 +31,7 @@ describe('math', () => {
     const multiply = require('../src/math/43.multiply');
 
     //
-    expect(multiply("2","3")).toEqual("6");
-    expect(multiply("123","456")).toEqual("56088");
+    expect(multiply('2', '3')).toEqual('6');
+    expect(multiply('123', '456')).toEqual('56088');
   });
 });

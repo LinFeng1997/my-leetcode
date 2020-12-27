@@ -292,13 +292,13 @@ describe('search', () => {
     ).toEqual(false);
   });
 
-    test('41.firstMissingPositive', () => {
-        const firstMissingPositive = require('../src/search/41.firstMissingPositive');
+  test('41.firstMissingPositive', () => {
+    const firstMissingPositive = require('../src/search/41.firstMissingPositive');
 
-        //
-        expect(firstMissingPositive([1,2,0])).toEqual(3);
-        expect(firstMissingPositive([3,4,-1,1])).toEqual(2);
-        expect(firstMissingPositive([7,8,9,11,12])).toEqual(1);
-        expect(firstMissingPositive([2,2])).toEqual(1);
-    });
+    //
+    expect(firstMissingPositive([1, 2, 0])).toEqual(3);
+    expect(firstMissingPositive([3, 4, -1, 1])).toEqual(2);
+    expect(firstMissingPositive([7, 8, 9, 11, 12])).toEqual(1);
+    expect(firstMissingPositive([2, 2])).toEqual(1);
+  });
 });
