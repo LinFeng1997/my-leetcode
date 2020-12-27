@@ -205,4 +205,17 @@ describe('recursion', () => {
       ).val
     ).toEqual(5);
   });
+
+  test('38.countAndSay', () => {
+    const countAndSay = require('../src/recursion/38.countAndSay');
+
+    //
+    expect(countAndSay(1)).toEqual("1");
+    expect(countAndSay(2)).toEqual("11");
+    expect(countAndSay(3)).toEqual("21");
+    expect(countAndSay(4)).toEqual("1211");
+    expect(countAndSay(5)).toEqual("111221");
+    expect(countAndSay(6)).toEqual("312211");
+
+  });
 });
