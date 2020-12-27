@@ -26,4 +26,12 @@ describe('math', () => {
     expect(divide(7, -3)).toEqual(-2);
     expect(divide(-2147483648, -1)).toEqual(2147483647);
   });
+
+  test('43.multiply', () => {
+    const multiply = require('../src/math/43.multiply');
+
+    //
+    expect(multiply("2","3")).toEqual("6");
+    expect(multiply("123","456")).toEqual("56088");
+  });
 });
