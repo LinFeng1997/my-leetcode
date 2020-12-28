@@ -44,10 +44,10 @@ describe('greedy', () => {
     expect(intToRoman(1994)).toEqual('MCMXCIV');
   });
 
-    test('45.jump', () => {
-        const jump = require('../src/greedy/45.jump');
+  test('45.jump', () => {
+    const jump = require('../src/greedy/45.jump');
 
-        //
-        expect(jump([2,3,1,1,4])).toEqual(2);
-    });
+    //
+    expect(jump([2, 3, 1, 1, 4])).toEqual(2);
+  });
 });
