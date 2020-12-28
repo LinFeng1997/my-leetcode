@@ -43,4 +43,11 @@ describe('greedy', () => {
     expect(intToRoman(58)).toEqual('LVIII');
     expect(intToRoman(1994)).toEqual('MCMXCIV');
   });
+
+    test('45.jump', () => {
+        const jump = require('../src/greedy/45.jump');
+
+        //
+        expect(jump([2,3,1,1,4])).toEqual(2);
+    });
 });
