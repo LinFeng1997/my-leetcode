@@ -207,4 +207,16 @@ describe('dynamic planning', () => {
     expect(trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1])).toEqual(6);
     expect(trap([4, 2, 0, 3, 2, 5])).toEqual(9);
   });
+
+  test('44.isMatch', () => {
+    const isMatch = require('../src/dynamicPlanning/44.isMatch');
+
+    //
+    expect(isMatch("aa","a")).toEqual(false);
+    expect(isMatch("aa","*")).toEqual(true);
+    expect(isMatch("cb","?a")).toEqual(false);
+    expect(isMatch("adceb","*a*b")).toEqual(true);
+    expect(isMatch("acdcb","a*c?b")).toEqual(false);
+    expect(isMatch("aab","c*a*b")).toEqual(false);
+  });
 });
