@@ -34,4 +34,43 @@ describe('math', () => {
     expect(multiply('2', '3')).toEqual('6');
     expect(multiply('123', '456')).toEqual('56088');
   });
+
+  test('48.rotate', () => {
+    const rotate = require('../src/math/48.rotate');
+
+    //
+    expect([
+      [1, 2, 3],
+      [4, 5, 6],
+      [7, 8, 9],
+    ]).toEqual([
+      [7, 4, 1],
+      [8, 5, 2],
+      [9, 6, 3],
+    ]);
+
+    expect(
+      rotate([
+        [5, 1, 9, 11],
+        [2, 4, 8, 10],
+        [13, 3, 6, 7],
+        [15, 14, 12, 16],
+      ])
+    ).toEqual([
+      [15, 13, 2, 5],
+      [14, 3, 4, 1],
+      [12, 6, 8, 9],
+      [16, 7, 10, 11],
+    ]);
+  });
+
+  test('50.pow', () => {
+    const pow = require('../src/math/50.pow');
+
+    //
+    expect(pow(2, 10)).toEqual(1024);
+    expect(pow(2.1, 3).toFixed(3)).toEqual('9.261');
+    expect(pow(2, -2)).toEqual(0.25);
+    expect(pow(0.00001, 2147483647)).toEqual(0);
+  });
 });
