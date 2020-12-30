@@ -73,4 +73,11 @@ describe('math', () => {
     expect(pow(2, -2)).toEqual(0.25);
     expect(pow(0.00001, 2147483647)).toEqual(0);
   });
+
+  test('53.maxSubArray', () => {
+    const maxSubArray = require('../src/dynamicPlanning/53.maxSubArray');
+
+    //
+    expect(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])).toEqual(6);
+  });
 });
