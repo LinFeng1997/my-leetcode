@@ -78,6 +78,6 @@ describe('math', () => {
     const maxSubArray = require('../src/dynamicPlanning/53.maxSubArray');
 
     //
-    expect(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])).toEqual(6);
+    expect(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])).toEqual(6);
   });
 });
