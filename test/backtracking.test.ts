@@ -350,5 +350,26 @@ describe('backtracking', () => {
         '()()()',
       ]);
     });
+
+    test('60.getPermutation', () => {
+      const getPermutation = require('../src/backtracking/60.getPermutation');
+
+      //
+      expect(
+          getPermutation(3,3)
+      ).toEqual('213');
+
+      expect(
+          getPermutation(4,9)
+      ).toEqual('2314');
+
+      expect(
+          getPermutation(3,1)
+      ).toEqual('123');
+
+      expect(
+          getPermutation(3,5)
+      ).toEqual('312');
+    });
   });
 });
