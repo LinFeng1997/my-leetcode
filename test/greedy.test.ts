@@ -55,8 +55,8 @@ describe('greedy', () => {
     const canJump = require('../src/greedy/55.canJump');
 
     //
-    expect(canJump([2,3,1,1,4])).toEqual(true);
-    expect(canJump([3,2,1,0,4])).toEqual(false);
+    expect(canJump([2, 3, 1, 1, 4])).toEqual(true);
+    expect(canJump([3, 2, 1, 0, 4])).toEqual(false);
     expect(canJump([0])).toEqual(true);
   });
 
@@ -64,7 +64,23 @@ describe('greedy', () => {
     const merge = require('../src/greedy/56.merge');
 
     //
-    expect(merge([[1,3],[2,6],[8,10],[15,18]])).toEqual([[1,6],[8,10],[15,18]]);
-    expect(merge([[1,4],[4,5]])).toEqual([[1,5]]);
+    expect(
+      merge([
+        [1, 3],
+        [2, 6],
+        [8, 10],
+        [15, 18],
+      ])
+    ).toEqual([
+      [1, 6],
+      [8, 10],
+      [15, 18],
+    ]);
+    expect(
+      merge([
+        [1, 4],
+        [4, 5],
+      ])
+    ).toEqual([[1, 5]]);
   });
 });
