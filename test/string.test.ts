@@ -24,4 +24,23 @@ describe('string', () => {
     expect(longestCommonPrefix(['flower', 'flow', 'flight'])).toEqual('fl');
     expect(longestCommonPrefix(['dog', 'racecar', 'car'])).toEqual('');
   });
+
+  test('58.lengthOfLastWord', () => {
+    const lengthOfLastWord = require('../src/string/58.lengthOfLastWord');
+
+    //
+    expect(
+        lengthOfLastWord("Hello World")
+    ).toEqual(5);
+
+    expect(
+        lengthOfLastWord("Hello World  ")
+    ).toEqual(5);
+
+    expect(
+        lengthOfLastWord(" ")
+    ).toEqual(0);
+
+
+  });
 });
