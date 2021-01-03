@@ -29,18 +29,10 @@ describe('string', () => {
     const lengthOfLastWord = require('../src/string/58.lengthOfLastWord');
 
     //
-    expect(
-        lengthOfLastWord("Hello World")
-    ).toEqual(5);
+    expect(lengthOfLastWord('Hello World')).toEqual(5);
 
-    expect(
-        lengthOfLastWord("Hello World  ")
-    ).toEqual(5);
+    expect(lengthOfLastWord('Hello World  ')).toEqual(5);
 
-    expect(
-        lengthOfLastWord(" ")
-    ).toEqual(0);
-
-
+    expect(lengthOfLastWord(' ')).toEqual(0);
   });
 });
