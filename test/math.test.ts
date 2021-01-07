@@ -92,11 +92,11 @@ describe('math', () => {
     expect(plusOne([9, 9, 9])).toEqual([1, 0, 0, 0]);
   });
 
-    test('67.addBinary', () => {
-        const addBinary = require('../src/math/67.addBinary');
+  test('67.addBinary', () => {
+    const addBinary = require('../src/math/67.addBinary');
 
-        //
-        expect(addBinary("11","1")).toEqual("100");
-        expect(addBinary("1010","1011")).toEqual("10101");
-    });
+    //
+    expect(addBinary('11', '1')).toEqual('100');
+    expect(addBinary('1010', '1011')).toEqual('10101');
+  });
 });

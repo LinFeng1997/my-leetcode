@@ -224,7 +224,7 @@ describe('dynamic planning', () => {
     const minDistance = require('../src/dynamicPlanning/72.minDistance');
 
     //
-    expect(minDistance("horse","ros")).toEqual(3);
-    expect(minDistance("intention","execution")).toEqual(5);
+    expect(minDistance('horse', 'ros')).toEqual(3);
+    expect(minDistance('intention', 'execution')).toEqual(5);
   });
 });

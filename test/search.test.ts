@@ -302,12 +302,12 @@ describe('search', () => {
     expect(firstMissingPositive([2, 2])).toEqual(1);
   });
 
-    test('69.mySqrt', () => {
-        const mySqrt = require('../src/search/69.mySqrt');
+  test('69.mySqrt', () => {
+    const mySqrt = require('../src/search/69.mySqrt');
 
-        //
-        expect(mySqrt(4)).toEqual(2);
-        expect(mySqrt(8)).toEqual(2);
-        expect(mySqrt(10)).toEqual(3);
-    });
+    //
+    expect(mySqrt(4)).toEqual(2);
+    expect(mySqrt(8)).toEqual(2);
+    expect(mySqrt(10)).toEqual(3);
+  });
 });

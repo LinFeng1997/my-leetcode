@@ -84,33 +84,51 @@ describe('greedy', () => {
     ).toEqual([[1, 5]]);
   });
 
-    test('68.fullJustify', () => {
-        const fullJustify = require('../src/greedy/68.fullJustify');
+  test('68.fullJustify', () => {
+    const fullJustify = require('../src/greedy/68.fullJustify');
 
-        //
-        expect(fullJustify(["This", "is", "an", "example", "of", "text", "justification."], 16)).toEqual([
-            "This    is    an",
-            "example  of text",
-            "justification.  "
-        ]);
-        expect(fullJustify(["What", "must", "be", "acknowledgment", "shall", "be"], 16)).toEqual([
-            "What   must   be",
-            "acknowledgment  ",
-            "shall be        "
-        ]);
+    //
+    expect(
+      fullJustify(
+        ['This', 'is', 'an', 'example', 'of', 'text', 'justification.'],
+        16
+      )
+    ).toEqual(['This    is    an', 'example  of text', 'justification.  ']);
+    expect(
+      fullJustify(['What', 'must', 'be', 'acknowledgment', 'shall', 'be'], 16)
+    ).toEqual(['What   must   be', 'acknowledgment  ', 'shall be        ']);
 
-        expect(fullJustify(
-            ["Science", "is", "what", "we", "understand", "well", "enough", "to", "explain",
-                "to", "a", "computer.", "Art", "is", "everything", "else", "we", "do"]
-            , 20)).toEqual(
-            [
-                "Science  is  what we",
-                "understand      well",
-                "enough to explain to",
-                "a  computer.  Art is",
-                "everything  else  we",
-                "do                  "
-            ]
-        );
-    });
+    expect(
+      fullJustify(
+        [
+          'Science',
+          'is',
+          'what',
+          'we',
+          'understand',
+          'well',
+          'enough',
+          'to',
+          'explain',
+          'to',
+          'a',
+          'computer.',
+          'Art',
+          'is',
+          'everything',
+          'else',
+          'we',
+          'do',
+        ],
+        20
+      )
+    ).toEqual([
+      'Science  is  what we',
+      'understand      well',
+      'enough to explain to',
+      'a  computer.  Art is',
+      'everything  else  we',
+      'do                  ',
+    ]);
+  });
 });
