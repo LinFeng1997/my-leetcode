@@ -219,4 +219,12 @@ describe('dynamic planning', () => {
     expect(isMatch('acdcb', 'a*c?b')).toEqual(false);
     expect(isMatch('aab', 'c*a*b')).toEqual(false);
   });
+
+  test('72.minDistance', () => {
+    const minDistance = require('../src/dynamicPlanning/72.minDistance');
+
+    //
+    expect(minDistance("horse","ros")).toEqual(3);
+    expect(minDistance("intention","execution")).toEqual(5);
+  });
 });
