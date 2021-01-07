@@ -301,4 +301,13 @@ describe('search', () => {
     expect(firstMissingPositive([7, 8, 9, 11, 12])).toEqual(1);
     expect(firstMissingPositive([2, 2])).toEqual(1);
   });
+
+    test('69.mySqrt', () => {
+        const mySqrt = require('../src/search/69.mySqrt');
+
+        //
+        expect(mySqrt(4)).toEqual(2);
+        expect(mySqrt(8)).toEqual(2);
+        expect(mySqrt(10)).toEqual(3);
+    });
 });
