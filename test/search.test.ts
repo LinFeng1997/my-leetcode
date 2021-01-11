@@ -311,19 +311,65 @@ describe('search', () => {
     expect(mySqrt(10)).toEqual(3);
   });
 
-    test('74.searchMatrix', () => {
-        const searchMatrix = require('../src/search/74.searchMatrix');
+  test('74.searchMatrix', () => {
+    const searchMatrix = require('../src/search/74.searchMatrix');
+
+    //
+    expect(
+      searchMatrix(
+        [
+          [1, 3, 5, 7],
+          [10, 11, 16, 20],
+          [23, 30, 34, 60],
+        ],
+        3
+      )
+    ).toEqual(true);
+    expect(
+      searchMatrix(
+        [
+          [1, 3, 5, 7],
+          [10, 11, 16, 20],
+          [23, 30, 34, 60],
+        ],
+        13
+      )
+    ).toEqual(false);
+
+    expect(searchMatrix([[1]], 0)).toEqual(false);
+  });
+
+    test('81.search', () => {
+        const search = require('../src/search/81.search');
 
         //
         expect(
-            searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]],3)
+            search(
+                [2, 5, 6, 0, 0, 1, 2],
+                0
+            )
         ).toEqual(true);
+
         expect(
-            searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]],13)
+            search(
+                [2, 5, 6, 0, 0, 1, 2],
+                3
+            )
         ).toEqual(false);
 
         expect(
-            searchMatrix([[1]],0)
+            search(
+                [1],
+                0
+            )
         ).toEqual(false);
+
+        expect(
+            search(
+                [1,0,1,1,1],
+                0
+            )
+        ).toEqual(true);
+
     });
 });
