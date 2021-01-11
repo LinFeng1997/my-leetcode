@@ -101,4 +101,12 @@ describe('math', () => {
     expect(addBinary('11', '1')).toEqual('100');
     expect(addBinary('1010', '1011')).toEqual('10101');
   });
+
+  test('89.grayCode', () => {
+    const grayCode = require('../src/math/89.grayCode');
+
+    //
+    expect(grayCode(2)).toEqual([0, 1, 3, 2])
+    expect(grayCode(0)).toEqual([0])
+  })
 });
