@@ -339,37 +339,16 @@ describe('search', () => {
     expect(searchMatrix([[1]], 0)).toEqual(false);
   });
 
-    test('81.search', () => {
-        const search = require('../src/search/81.search');
+  test('81.search', () => {
+    const search = require('../src/search/81.search');
 
-        //
-        expect(
-            search(
-                [2, 5, 6, 0, 0, 1, 2],
-                0
-            )
-        ).toEqual(true);
+    //
+    expect(search([2, 5, 6, 0, 0, 1, 2], 0)).toEqual(true);
 
-        expect(
-            search(
-                [2, 5, 6, 0, 0, 1, 2],
-                3
-            )
-        ).toEqual(false);
+    expect(search([2, 5, 6, 0, 0, 1, 2], 3)).toEqual(false);
 
-        expect(
-            search(
-                [1],
-                0
-            )
-        ).toEqual(false);
+    expect(search([1], 0)).toEqual(false);
 
-        expect(
-            search(
-                [1,0,1,1,1],
-                0
-            )
-        ).toEqual(true);
-
-    });
+    expect(search([1, 0, 1, 1, 1], 0)).toEqual(true);
+  });
 });

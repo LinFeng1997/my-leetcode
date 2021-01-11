@@ -281,11 +281,11 @@ describe('LinkList', () => {
 
   test('88.partition', () => {
     const partition = require('../src/linkList/88.partition');
-    const { makeLinkList } = require('../test/util')
+    const { makeLinkList } = require('../test/util');
 
     //
     expect(partition(makeLinkList([1, 4, 3, 2, 5, 2]), 3)).toEqual(
-        makeLinkList([1, 2, 2, 4, 3, 5])
+      makeLinkList([1, 2, 2, 4, 3, 5])
     );
   });
 });
