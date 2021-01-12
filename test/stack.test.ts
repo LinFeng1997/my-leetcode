@@ -99,4 +99,11 @@ describe('stack', () => {
     expect(longestValidParentheses('()')).toEqual(2);
     expect(longestValidParentheses('()))))))))))()')).toEqual(2);
   });
+
+  test('84.largestRectangleArea', () => {
+    const largestRectangleArea = require('../src/stack/84.largestRectangleArea');
+
+    //
+    expect(largestRectangleArea([2,1,5,6,2,3])).toEqual(10);
+  });
 });
