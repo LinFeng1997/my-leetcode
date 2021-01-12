@@ -227,4 +227,11 @@ describe('dynamic planning', () => {
     expect(minDistance('horse', 'ros')).toEqual(3);
     expect(minDistance('intention', 'execution')).toEqual(5);
   });
+
+  test('96.numTrees', () => {
+    const numTrees = require('../src/dynamicPlanning/96.numTrees');
+
+    //
+    expect(numTrees(3)).toEqual(5);
+  });
 });
