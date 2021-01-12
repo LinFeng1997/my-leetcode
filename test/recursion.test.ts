@@ -217,4 +217,18 @@ describe('recursion', () => {
     expect(countAndSay(5)).toEqual('111221');
     expect(countAndSay(6)).toEqual('312211');
   });
+
+  test('95.generateTrees', () => {
+    const generateTrees = require('../src/recursion/95.generateTrees');
+    const { createTree } = require('./util');
+
+    //
+    expect(generateTrees(3)).toEqual([
+      createTree([1,null,2,null,3]),
+      createTree([1,null,3,2]),
+      createTree([2,1,3]),
+      createTree([3,1,null,null,2]),
+      createTree([3,2,null,1]),
+    ]);
+  });
 });
