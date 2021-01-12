@@ -224,11 +224,11 @@ describe('recursion', () => {
 
     //
     expect(generateTrees(3)).toEqual([
-      createTree([1,null,2,null,3]),
-      createTree([1,null,3,2]),
-      createTree([2,1,3]),
-      createTree([3,1,null,null,2]),
-      createTree([3,2,null,1]),
+      createTree([1, null, 2, null, 3]),
+      createTree([1, null, 3, 2]),
+      createTree([2, 1, 3]),
+      createTree([3, 1, null, null, 2]),
+      createTree([3, 2, null, 1]),
     ]);
   });
 });

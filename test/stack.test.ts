@@ -104,6 +104,6 @@ describe('stack', () => {
     const largestRectangleArea = require('../src/stack/84.largestRectangleArea');
 
     //
-    expect(largestRectangleArea([2,1,5,6,2,3])).toEqual(10);
+    expect(largestRectangleArea([2, 1, 5, 6, 2, 3])).toEqual(10);
   });
 });

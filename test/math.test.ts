@@ -106,7 +106,7 @@ describe('math', () => {
     const grayCode = require('../src/math/89.grayCode');
 
     //
-    expect(grayCode(2)).toEqual([0, 1, 3, 2])
-    expect(grayCode(0)).toEqual([0])
-  })
+    expect(grayCode(2)).toEqual([0, 1, 3, 2]);
+    expect(grayCode(0)).toEqual([0]);
+  });
 });
