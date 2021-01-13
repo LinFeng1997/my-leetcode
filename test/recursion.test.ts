@@ -231,4 +231,24 @@ describe('recursion', () => {
       createTree([3, 2, null, 1]),
     ]);
   });
+
+  test('105.buildTree', () => {
+    const buildTree = require('../src/recursion/105.buildTree');
+    const { createTree } = require('./util');
+
+    //
+    expect(buildTree([3,9,20,15,7],[9,3,15,20,7])).toEqual(
+        createTree([3,9,20,null,null,15,7])
+    );
+  });
+
+  test('106.buildTree', () => {
+    const buildTree = require('../src/recursion/106.buildTree');
+    const { createTree } = require('./util');
+
+    //
+    expect(buildTree([9,3,15,20,7],[9,15,7,20,3])).toEqual(
+        createTree([3,9,20,null,null,15,7])
+    );
+  });
 });
