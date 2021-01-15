@@ -288,4 +288,33 @@ describe('LinkList', () => {
       makeLinkList([1, 2, 2, 4, 3, 5])
     );
   });
+
+  test('138.copyRandomList', () => {
+    const copyRandomList = require('../src/linkList/138.copyRandomList');
+    const { makeLinkList } = require('./util');
+
+    //
+    const input = makeLinkList([7,13,11,10,1]);
+    function findNode(index:number | null) {
+      if (index === null) return null;
+
+      let node = input;
+
+      while (head && index) {
+        node = head.next;
+        index--;
+      }
+
+      return node;
+    }
+
+    let head = input;
+    let randoms = [null,0,4,2,0];
+    randoms.forEach(item => {
+      head.random = findNode(item);
+      head = head.next;
+    });
+
+    expect(copyRandomList(input)).toEqual(input);
+  });
 });
