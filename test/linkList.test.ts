@@ -294,8 +294,8 @@ describe('LinkList', () => {
     const { makeLinkList } = require('./util');
 
     //
-    const input = makeLinkList([7,13,11,10,1]);
-    function findNode(index:number | null) {
+    const input = makeLinkList([7, 13, 11, 10, 1]);
+    function findNode(index: number | null) {
       if (index === null) return null;
 
       let node = input;
@@ -309,7 +309,7 @@ describe('LinkList', () => {
     }
 
     let head = input;
-    let randoms = [null,0,4,2,0];
+    let randoms = [null, 0, 4, 2, 0];
     randoms.forEach(item => {
       head.random = findNode(item);
       head = head.next;
