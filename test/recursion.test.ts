@@ -237,8 +237,8 @@ describe('recursion', () => {
     const { createTree } = require('./util');
 
     //
-    expect(buildTree([3,9,20,15,7],[9,3,15,20,7])).toEqual(
-        createTree([3,9,20,null,null,15,7])
+    expect(buildTree([3, 9, 20, 15, 7], [9, 3, 15, 20, 7])).toEqual(
+      createTree([3, 9, 20, null, null, 15, 7])
     );
   });
 
@@ -247,8 +247,28 @@ describe('recursion', () => {
     const { createTree } = require('./util');
 
     //
-    expect(buildTree([9,3,15,20,7],[9,15,7,20,3])).toEqual(
-        createTree([3,9,20,null,null,15,7])
+    expect(buildTree([9, 3, 15, 20, 7], [9, 15, 7, 20, 3])).toEqual(
+      createTree([3, 9, 20, null, null, 15, 7])
+    );
+  });
+
+  test('109.sortedListToBST', () => {
+      const sortedListToBST = require('../src/recursion/109.sortedListToBST');
+      const { createTree,makeLinkList } = require('./util');
+
+      //
+      expect(sortedListToBST(makeLinkList([-10,-3,0,5,9]))).toEqual(
+          createTree([0, -3, 9, -10, null, 5])
+      );
+  });
+
+  test('114.flatten', () => {
+    const flatten = require('../src/recursion/114.flatten');
+    const { createTree } = require('./util');
+
+    //
+    expect(flatten(createTree([1,2,5,3,4,null,6]))).toEqual(
+        createTree([1,null,2,null,3,null,4,null,5,null,6])
     );
   });
 });
