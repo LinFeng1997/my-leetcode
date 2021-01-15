@@ -55,4 +55,14 @@ describe('string', () => {
     expect(isNumber('-+3')).toEqual(false);
     expect(isNumber('95a54e53')).toEqual(false);
   });
+
+  test('151.reverseWords', () => {
+    const reverseWords = require('../src/string/151.reverseWords');
+
+    expect(reverseWords("the sky is blue")).toBe("blue is sky the");
+    expect(reverseWords("  hello world!  ")).toBe("world! hello");
+    expect(reverseWords("a good   example")).toBe("example good a");
+    expect(reverseWords("  Bob    Loves  Alice   ")).toBe("Alice Loves Bob");
+    expect(reverseWords("Alice does not even like bob")).toBe("bob like even not does Alice");
+  });
 });
