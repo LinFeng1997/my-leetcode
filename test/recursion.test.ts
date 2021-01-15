@@ -253,13 +253,13 @@ describe('recursion', () => {
   });
 
   test('109.sortedListToBST', () => {
-      const sortedListToBST = require('../src/recursion/109.sortedListToBST');
-      const { createTree,makeLinkList } = require('./util');
+    const sortedListToBST = require('../src/recursion/109.sortedListToBST');
+    const { createTree, makeLinkList } = require('./util');
 
-      //
-      expect(sortedListToBST(makeLinkList([-10,-3,0,5,9]))).toEqual(
-          createTree([0, -3, 9, -10, null, 5])
-      );
+    //
+    expect(sortedListToBST(makeLinkList([-10, -3, 0, 5, 9]))).toEqual(
+      createTree([0, -3, 9, -10, null, 5])
+    );
   });
 
   test('114.flatten', () => {
@@ -267,8 +267,8 @@ describe('recursion', () => {
     const { createTree } = require('./util');
 
     //
-    expect(flatten(createTree([1,2,5,3,4,null,6]))).toEqual(
-        createTree([1,null,2,null,3,null,4,null,5,null,6])
+    expect(flatten(createTree([1, 2, 5, 3, 4, null, 6]))).toEqual(
+      createTree([1, null, 2, null, 3, null, 4, null, 5, null, 6])
     );
   });
 });
