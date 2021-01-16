@@ -271,4 +271,73 @@ describe('recursion', () => {
       createTree([1, null, 2, null, 3, null, 4, null, 5, null, 6])
     );
   });
+
+  test('116.connect', () => {
+    const connect = require('../src/recursion/116.connect');
+    const { createTree } = require('./util');
+
+    const check = function(root: any) {
+      if (root === null) {
+        return root;
+      }
+
+      // 初始化队列同时将第一层节点加入队列中，即根节点
+      const Q = [root];
+
+      // 外层的 while 循环迭代的是层数
+      while (Q.length > 0) {
+        // 记录当前队列大小
+        const size = Q.length;
+
+        // 遍历这一层的所有节点
+        for (let i = 0; i < size; i++) {
+          // 从队首取出元素
+          const node = Q.shift();
+
+          // 连接
+          if (i < size - 1) {
+            node.next = Q[0];
+          } else {
+            node.next = null;
+          }
+
+          // 拓展下一层节点
+          if (node.left !== null) {
+            Q.push(node.left);
+          }
+          if (node.right !== null) {
+            Q.push(node.right);
+          }
+        }
+      }
+
+      // 返回根节点
+      return root;
+    };
+
+    expect(connect(createTree([1, 2, 3, 4, 5, 6, 7]))).toEqual(
+      check(createTree([1, 2, 3, 4, 5, 6, 7]))
+    );
+  });
+
+  test('253.minMeetingRooms', () => {
+    const minMeetingRooms = require('../src/array/253.minMeetingRooms');
+
+    expect(
+      minMeetingRooms([
+        [
+          [0, 30],
+          [5, 10],
+          [15, 20],
+        ],
+      ])
+    ).toEqual(2);
+
+    expect(
+      minMeetingRooms([
+        [7, 10],
+        [2, 4],
+      ])
+    ).toEqual(1);
+  });
 });
