@@ -10,7 +10,7 @@ var wordBreak = function(s, wordDict) {
     dp[0] = true;
 
     function check(i,j) {
-        const str = s.substr(j,i-j);
+        const str = s.substring(j,i);
         return wordDict.includes(str);
     }
 
