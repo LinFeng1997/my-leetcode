@@ -325,11 +325,9 @@ describe('recursion', () => {
 
     expect(
       minMeetingRooms([
-        [
           [0, 30],
           [5, 10],
           [15, 20],
-        ],
       ])
     ).toEqual(2);
 
