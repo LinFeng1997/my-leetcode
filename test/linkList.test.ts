@@ -316,5 +316,6 @@ describe('LinkList', () => {
     });
 
     expect(copyRandomList(input)).toEqual(input);
+    expect(copyRandomList(null)).toEqual(null);
   });
 });
